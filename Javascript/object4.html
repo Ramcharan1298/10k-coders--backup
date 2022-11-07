@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-4</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@500&family=Tourney:wght@600&display=swap" rel="stylesheet">
+        <style>
+            *{
+                font-family: 'Poppins', sans-serif;
+            }
+            .Movie{
+                font-weight: 600;
+                color: beige;
+                background-color: rgb(52, 42, 165);
+                margin-bottom: 10px;
+            }
+            .About{
+                background-color: rgb(13, 9, 2);
+                font-weight: 600;
+                margin-bottom: 10px;
+                color: aliceblue;
+            }
+            .charan{
+                background-color: rgb(246, 176, 15);
+                margin-top: 10px;
+            }
+        </style>
+</head>
+<body>
+    <fieldset>
+        <legend><h2>Ram charan Details</h2></legend>
+        
+        
+   <!-----------------Using Literal Method------------>     
+        
+        <div class="Movie">
+            <fieldset>
+         <center>      
+                <h3>Using Literal Method</h3>
+                <h4>(Movie Details)</h4>
+        <script>
+            var Movie={
+                Heroname:'Ram Charan',
+                Actress:'Kiara Advani',
+                MovieName:'RC-15',
+                Director:'Shankar',
+                MainLeads:'Not Mentioned',
+            }
+            for(a in Movie){
+                document.write(a+' :-- '+Movie[a]+'<br>')
+            }
+        </script>
+        </center> 
+        </fieldset>
+        </div>
+
+
+        <!-----------------Using Built-In Method------------->
+        <div style="margin-bottom: 10px; background-color:rgb(225, 175, 229); font-weight: 600;">
+            <fieldset>
+         <center>      
+                <h3>Using Built-In Method</h3>
+                <h4>(Personal Details)</h4>
+        <script>
+            var Hero=new Object({
+                Firstname:'Ram Charan',
+                Lastname:'Konidela',
+                Nationality:'Indian',
+                BloodGroup:'B+',
+                Born:'Chennai'
+            
+            })
+            for(b in Hero){
+               document.write(b+' :-- '+Hero[b]+'<br>')
+            }        
+            </script>
+        </center> 
+        </fieldset>
+        </div>
+
+
+<!---------------------Using Constructor Method------------>
+<div class="About">
+<fieldset>
+    <center>
+    <h3>Using Constructor Method</h3>
+    <h4>(About Person)</h4>
+    
+        <script>
+            function About(o,a,h,s,c,){
+               this.Occupation=o
+               this.Age=a
+               this.Height=h
+               this.Spouse=s
+               this.Children=c
+            }
+            var hero=new About('Actor','38','5.10','Upasana','0')
+            for(c in hero){
+                document.write(c+' :-- '+hero[c]+'<br>')
+            }
+        </script>
+
+    </center>
+</fieldset>
+</div>
+
+
+    <!-------------------Using Class Method------------->
+<div class="charan ">
+    <fieldset>
+        <center>
+            <h3>Using Class Method</h3>
+            <h4>(Relatives)</h4>
+            <script>
+               class Names{
+                constructor(n1,n2,n3,n4,){
+                    this.Relative1=n1
+                    this.Relative2=n2
+                    this.Relative3=n3
+                    this.Relative4=n4
+                }
+               }
+               var charan=new Names('Pavan Kalyan','Naga Babu','Allu Arjun(cousin)','Sai Dharm Tej(cousin)')
+               for(e in charan){
+                document.write(e+' :-- '+charan[e]+'<br>')
+               }
+            </script>
+        </center>
+    </fieldset>
+</div>
+
+    </fieldset>
+</body>
+</html>

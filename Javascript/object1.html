@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@500&family=Tourney:wght@600&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Poppins', sans-serif;
+        }
+        .personal{
+            color: rgb(236, 10, 187);
+            font-weight: 600;
+        }
+        .Upcoming1{
+            color: rgb(35, 10, 253);
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset >
+        <legend><h1>Prabhas Details</h1></legend>
+    <center>
+        <fieldset style="background-color: aquamarine;margin-bottom: 10px;">
+        <div><h3>Using Literal Method</h3>
+            <h5>(Movie Details)</h5>
+        <script>
+            //------------Literal Way-------------
+            var Movie = {
+                Heroname: 'PRABHAS',
+                Actress: 'Sruthi Hassan',
+                MovieName: 'SALAAR',
+                Director: 'Prashanth Neel',
+                MainLeads:'Prithvi Raj Sukumaaran'
+            }
+
+            for (a in Movie) {
+                document.write(a + ' :--' + Movie[a] + '<br>')
+            }        
+        </script>
+        </div>
+    </fieldset>
+    </center>
+
+
+
+
+
+
+    <center>
+        <fieldset style="margin-bottom: 10px;">
+            <h3>Using Bulit-in Method</h3>
+            <h5>(Personal Details)</h5>
+        <div class="personal">
+        <script>
+            //------------Built In-------------
+            var Hero = new Object({ 
+                Firstname: 'PRABHAS', 
+                lastname: 'UPPALAPAATI',
+                Nationality:'Indian',
+                BloodGroup:'O+',
+                Native:'Mogalthoor,Hyd',
+                
+            })                    
+             for(b in Hero){
+                document.write(b+' :-- '+Hero[b]+'<br>')
+             }
+
+        </script>
+        </div>
+    </fieldset>
+    </center>
+
+
+
+    
+
+    <center>
+        <fieldset style="background-color: rgb(175, 247, 6);margin-bottom: 10px;">
+        <div>
+            <h3>Using Constructor Method</h3>
+            <h5>(About Person)</h5>            
+        <script>
+            //------------Using Constructor Way-------------
+            function About(a,h,w,t,c) {
+                this.Age=a
+                this.Height=h
+                this.weight=w
+                this.tone=t
+                this.EyeColour=c
+            }  
+            var About=new About('43',6.20,'90kgs','fair','Light Brown')
+            for(d in About){
+                document.write(d+' :-- '+About[d]+'<br>')
+            }
+        </script>
+        </div>
+    </fieldset>
+    </center>
+
+
+    
+    
+    <center>  
+            <fieldset>
+            <h3>Using Class Method</h3>
+            <h5>(Upcoming Movies)</h5>
+            <div class="Upcoming1">           
+        <script>
+            //------------Using Class Method-------------
+            class Prabhas{
+                constructor(A,s,P,S,n){
+                     this.MovieNo22=A
+                     this.MovieNo23=s
+                     this.MovieNo24=P
+                     this.MovieNo25=S
+                     this.MovieNo26=n
+                }
+            }
+             var Upcoming1=new Prabhas('ADIPURUSH','SALAAR','PROJECT_K','SPIRIT','Not Announced')
+             for( e in Upcoming1){
+                document.write(e+" :--"+Upcoming1[e]+'<br>')
+             }
+        </script>
+        </div>
+    </fieldset>
+    </center>
+
+</fieldset>
+</body>
+
+</html>

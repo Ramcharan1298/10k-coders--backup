@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-3</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@500&family=Tourney:wght@600&display=swap" rel="stylesheet">
+        <style>
+            *{
+                font-family: 'Poppins', sans-serif;
+            }
+            .Movie{
+                font-weight: 600;
+                color: rgb(240, 15, 19);
+                background-color: rgb(11, 244, 66);
+                margin-bottom: 10px;
+            }
+            .About{
+                background-color: blanchedalmond;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+            .ntr{
+                background-color: rgb(188, 238, 5);
+                margin-top: 10px;
+                font-weight: 600;
+                color: rgb(46, 43, 240);
+            }
+        </style>
+</head>
+<body>
+    <fieldset>
+        <legend><h2>N.T.R Details</h2></legend>
+        
+        
+   <!-----------------Using Literal Method------------>     
+        
+        <div class="Movie">
+            <fieldset>
+         <center>      
+                <h3>Using Literal Method</h3>
+                <h4>(Movie Details)</h4>
+        <script>
+            var Movie={
+                Heroname:'N.T.R',
+                Actress:'Janvi Kapoor',
+                MovieName:'Not Announced',
+                Director:'Koratala Siva',
+                MainLeads:'Not Mentioned',
+            }
+            for(a in Movie){
+                document.write(a+' :-- '+Movie[a]+'<br>')
+            }
+        </script>
+        </center> 
+        </fieldset>
+        </div>
+
+
+        <!-----------------Using Built-In Method------------->
+        <div style="margin-bottom: 10px; background-color:rgb(243, 8, 156);color: chartreuse;font-weight: 600;">
+            <fieldset>
+         <center>      
+                <h3>Using Built-In Method</h3>
+                <h4>(Personal Details)</h4>
+        <script>
+            var Hero=new Object({
+                Firstname:'Tarak Rama Rao',
+                Lastname:'Nandamuri',
+                Nationality:'Indian',
+                BloodGroup:'B-',
+                Native:'Hyd'
+            
+            })
+            for(b in Hero){
+               document.write(b+' :-- '+Hero[b]+'<br>')
+            }        
+            </script>
+        </center> 
+        </fieldset>
+        </div>
+
+
+<!---------------------Using Constructor Method------------>
+<div class="About">
+<fieldset>
+    <center>
+    <h3>Using Constructor Method</h3>
+    <h4>(About Person)</h4>
+    
+        <script>
+            function About(o,a,h,s,c,){
+               this.Occupation=o
+               this.Age=a
+               this.Height=h
+               this.Spouse=s
+               this.Children=c
+            }
+            var hero=new About('Actor','38','5.9','Lakshmi Pranathi','2-members')
+            for(c in hero){
+                document.write(c+' :-- '+hero[c]+'<br>')
+            }
+        </script>
+
+    </center>
+</fieldset>
+</div>
+
+
+    <!-------------------Using Class Method------------->
+<div class="ntr ">
+    <fieldset>
+        <center>
+            <h3>Using Class Method</h3>
+            <h4>(Relatives)</h4>
+            <script>
+               class Names{
+                constructor(n1,n2,n3,n4,){
+                    this.Relative1=n1
+                    this.Relative2=n2
+                    this.Relative3=n3
+                    this.Relative4=n4
+                }
+               }
+               var ntr=new Names('NTR(Grand Father)','N.B.K(Uncle)','Kalyan Ram(Brother)','Hari Krishna(Father)')
+               for(e in ntr){
+                document.write(e+' :-- '+ntr[e]+'<br>')
+               }
+            </script>
+        </center>
+    </fieldset>
+</div>
+
+    </fieldset>
+</body>
+</html>

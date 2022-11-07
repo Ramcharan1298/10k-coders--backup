@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-2</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@500&family=Tourney:wght@600&display=swap" rel="stylesheet">
+        <style>
+            *{
+                font-family: 'Poppins', sans-serif;
+            }
+            .Movie{
+                font-weight: 600;
+                color: beige;
+                background-color: brown;
+                margin-bottom: 10px;
+            }
+            .About{
+                background-color: blanchedalmond;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+            .Arjun{
+                background-color: rgb(188, 238, 5);
+                margin-top: 10px;
+            }
+        </style>
+</head>
+<body>
+    <fieldset>
+        <legend><h2>Allu Arjun Details</h2></legend>
+        
+        
+   <!-----------------Using Literal Method------------>     
+        
+        <div class="Movie">
+            <fieldset>
+         <center>      
+                <h3>Using Literal Method</h3>
+                <h4>(Movie Details)</h4>
+        <script>
+            var Movie={
+                Heroname:'Allu Arjun',
+                Actress:'Rashmika Mandana',
+                MovieName:'Pushpa-2(The Rule)',
+                Director:'Sukumar',
+                MainLeads:'Fahad Fassil',
+            }
+            for(a in Movie){
+                document.write(a+' :-- '+Movie[a]+'<br>')
+            }
+        </script>
+        </center> 
+        </fieldset>
+        </div>
+
+
+
+
+
+
+        <!-----------------Using Built-In Method------------->
+        <div style="margin-bottom: 10px; background-color:aqua">
+            <fieldset>
+         <center>      
+                <h3>Using Built-In Method</h3>
+                <h4>(Personal Details)</h4>
+        <script>
+            var Hero=new Object({
+                Firstname:'Arjun',
+                Lastname:'Allu',
+                Nationality:'Indian',
+                BloodGroup:'B+',
+                Native:'Chennai'
+            
+            })
+            for(b in Hero){
+               document.write(b+' :-- '+Hero[b]+'<br>')
+            }        
+            </script>
+        </center> 
+        </fieldset>
+        </div>
+
+
+<!---------------------Using Constructor Method------------>
+<div class="About">
+<fieldset>
+    <center>
+    <h3>Using Constructor Method</h3>
+    <h4>(About Person)</h4>
+    
+        <script>
+            function About(o,a,h,s,c,){
+               this.Occupation=o
+               this.Age=a
+               this.Height=h
+               this.Spouse=s
+               this.Children=c
+            }
+            var hero=new About('Actor','37','5.9','Sneha Reddy','2-members')
+            for(c in hero){
+                document.write(c+' :-- '+hero[c]+'<br>')
+            }
+        </script>
+
+    </center>
+</fieldset>
+</div>
+
+
+    <!-------------------Using Class Method------------->
+<div class="Arjun ">
+    <fieldset>
+        <center>
+            <h3>Using Class Method</h3>
+            <h4>(Other Names)</h4>
+            <script>
+               class Names{
+                constructor(n1,n2,n3,n4,){
+                    this.NickName1=n1
+                    this.NickName2=n2
+                    this.NickName3=n3
+                    this.NickName4=n4
+                }
+               }
+               var Allu=new Names('Bunny','Mallu Star','Stylish Star','Icon Star')
+               for(e in Allu){
+                document.write(e+' :-- '+Allu[e]+'<br>')
+               }
+            </script>
+        </center>
+    </fieldset>
+</div>
+
+    </fieldset>
+</body>
+</html>
