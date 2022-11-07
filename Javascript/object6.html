@@ -15,18 +15,18 @@
             }
             .Movie{
                 font-weight: 600;
-                color: rgb(247, 5, 49);
-                background-color: rgb(213, 236, 146);
+                color: rgb(247, 5, 223);
+                background-color: rgb(185, 245, 6);
                 margin-bottom: 10px;
             }
             .About{
-                background-color: rgb(159, 212, 241);
+                background-color: rgb(247, 6, 199);
                 font-weight: 600;
                 margin-bottom: 10px;
-                color: rgb(168, 65, 6);
+                color: rgb(8, 225, 249);
             }
-            .mahesh{
-                background-color: rgb(128, 9, 96);
+            .vijay{
+                background-color: rgb(128, 31, 9);
                 margin-top: 10px;
                 color: white;
             }
@@ -34,7 +34,7 @@
 </head>
 <body>
     <fieldset>
-        <legend><h2>Mahesh Babu Details</h2></legend>
+        <legend><h2>Vijay Devarakonda Details</h2></legend>
         
         
    <!-----------------Using Literal Method------------>     
@@ -46,10 +46,10 @@
                 <h4>(Movie Details)</h4>
         <script>
             var Movie={
-                Heroname:'Mahesh Babu',
-                Actress:'Not Announced',
-                MovieName:'SSMB-28',
-                Director:'Sukumar',
+                Heroname:'Vijay Devarakonda',
+                Actress:'Samantha',
+                MovieName:'Khushi',
+                Director:'Shiva Narayana',
                 MainLeads:'Not Mentioned',
             }
             for(a in Movie){
@@ -62,18 +62,18 @@
 
 
         <!-----------------Using Built-In Method------------->
-        <div style="margin-bottom: 10px; background-color:rgb(67, 43, 219); font-weight: 600;">
+        <div style="margin-bottom: 10px; background-color:rgb(248, 240, 4); font-weight: 600;">
             <fieldset>
          <center>      
                 <h3>Using Built-In Method</h3>
                 <h4>(Personal Details)</h4>
         <script>
             var Hero=new Object({
-                Firstname:'Mahesh Babu',
-                Lastname:'Gattamaneni',
+                Firstname:'Vijay',
+                Lastname:'Devarakonda',
                 Nationality:'Indian',
-                BloodGroup:'O+',
-                Born:'Chennai'
+                BloodGroup:'O-',
+                Born:'Hyderabad'
             
             })
             for(b in Hero){
@@ -100,7 +100,7 @@
                this.Spouse=s
                this.Children=c
             }
-            var hero=new About('Film Actor','48','6.00','Namratha Shirodkar','2')
+            var hero=new About('Film Actor','33','6.00','none','none')
             for(c in hero){
                 document.write(c+' :-- '+hero[c]+'<br>')
             }
@@ -112,24 +112,24 @@
 
 
     <!-------------------Using Class Method------------->
-<div class="mahesh ">
+<div class="vijay ">
     <fieldset>
         <center>
             <h3>Using Class Method</h3>
-            <h4>(Relatives)</h4>
+            <h4>(Awards Recieved)</h4>
             <script>
                class Names{
                 constructor(n1,n2,n3,n4,n5){
-                    this.Relative1=n1
-                    this.Relative2=n2
-                    this.Relative3=n3
-                    this.Relative4=n4
-                    this.Relative5=n5
+                    this.Awards1=n1
+                    this.Awards2=n2
+                    this.Awards3=n3
+                    this.Awards4=n4
+                    
                 }
                }
-               var mahesh=new Names('Ramesh Babu(Brother)','Manjula Swaroop(Sister)','Naresh(Brother)','Galla Jayadev(Brother-in-Law)','Sudheer Babu(Brother-in-Law)')
-               for(e in mahesh){
-                document.write(e+' :-- '+mahesh[e]+'<br>')
+               var vijay=new Names('Filmfare Award','Nandi Award','SIIMA Award','Forbes India Celebrity',)
+               for(e in vijay){
+                document.write(e+' :-- '+vijay[e]+'<br>')
                }
             </script>
         </center>
