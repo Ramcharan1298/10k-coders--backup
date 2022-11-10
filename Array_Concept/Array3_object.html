@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IND vs PAK</title>
+</head>
+
+<body>
+    <div>
+        <fieldset>
+            <script>
+                var teamIndia = [
+                    {
+                        name: "KL Rahul",
+                        runs: 4,
+                        balls: 8,
+                        fours: 0,
+                        sixes: 0,
+                        StrikeRate: 50
+                    },
+                    {
+                        name: "Rohit Sharma(C)",
+                        runs: 4,
+                        balls: 7,
+                        fours: 0,
+                        sixes: 0,
+                        StrikeRate: 57.14
+                    },
+                    {
+                        name: "Virat Kohli",
+                        runs: 82,
+                        balls: 53,
+                        fours: 6,
+                        sixes: 4,
+                        StrikeRate: 154.72
+                    },
+                    {
+                        name: "SuryaKumar Yadav",
+                        runs: 15,
+                        balls: 10,
+                        fours: 2,
+                        sixes: 0,
+                        StrikeRate: 150.00
+                    },
+                    {
+                        name: "Axar Patel",
+                        runs: 2,
+                        balls: 3,
+                        fours: 0,
+                        sixes: 0,
+                        StrikeRate: 66.67
+                    },
+                    {
+                        name: "Hardik Pandya",
+                        runs: 40,
+                        balls: 37,
+                        fours: 1,
+                        sixes: 2,
+                        StrikeRate: 108.11
+                    },
+                    {
+                        name: "Dinesh Karthik(WK)",
+                        runs: 1,
+                        balls: 2,
+                        fours: 0,
+                        sixes: 0,
+                        StrikeRate: 50.00
+                    },
+                    {
+                        name: "Ravichandran Ashwin",
+                        runs: 1,
+                        balls: 1,
+                        fours: 0,
+                        sixes: 0,
+                        StrikeRate: 100.00
+                    },
+                ]
+
+
+                
+
+                var teamruns = teamIndia.reduce((a, team) => {
+                    if (a.runs) {
+                        return a.runs + team.runs
+                    } else {
+                        return a + team.runs
+                    }
+                })
+                console.log('Total Runs by All Players :-', teamruns)
+                document.write("Total Runs by Indian Players :-"+teamruns+'<br>'+'<br>')
+
+
+
+                var teamruns = teamIndia.reduce((a, team) => {
+                    if (a.fours==0) {
+                        return a.fours + team.fours
+                    } else {
+                        return a + team.fours
+                    }
+                })
+                console.log('Total Fours By All Players :-', teamruns)
+                document.write('Total Fours by Indian Team :-'+teamruns+'<br>'+'<br>')
+
+
+
+                var teamruns = teamIndia.reduce((a, team) => {
+                    if (a.sixes==0) {
+                        return a.sixes + team.sixes
+                    } else {
+                        return a + team.sixes
+                    }
+                })
+                console.log('Total sixes By All Players :-', teamruns)
+                document.write('Total Sixes by Indian Team :-'+teamruns+'<br>'+'<br>')
+
+
+                var lowestscore = teamIndia.filter((ram) => {
+                    return ram.runs <= 15;
+                })
+                console.log("Least Runs Scored Players :-", lowestscore)
+                document.write('The Least Runs Scored by Indian Team Players :-'+lowestscore+'<br>'+'<br>')
+                
+
+                var highestscore = teamIndia.filter((ram) => {
+                    return ram.runs >= 20;
+                })
+                console.log("Maximum Runs Scored By Players :-", highestscore)
+                document.write('The Maximum Runs Scored by Indian Team Players :-'+highestscore+'<br>'+'<br>')
+
+
+                var lowestscore = teamIndia.filter((ram) => {
+                    return ram.StrikeRate <= 100;
+                })
+                console.log("Least StrikeRate :-", lowestscore)
+                document.write('The Least StrikeRate Done by the Players :-'+lowestscore+'<br>'+'<br>')
+
+
+                var highestscore = teamIndia.filter((team) => {
+                    return team.StrikeRate >= 100
+                })
+                console.log('Maximum StrikeRate :-', highestscore)
+                document.write('The Highest StrikeRate Done by the Players :-'+highestscore+'<br>'+'<br>')
+
+
+
+
+
+            // teamIndia.forEach((Hero)=>{
+            //     document.write(Hero.name+' : -'+Hero.runs+'<br>')
+            // })
+
+            // var lowestscore=teamIndia.filter((Hero)=>{
+            //     return Hero.runs <=50
+            // })
+            // console.log("lowest scored by heros :-",lowestscore)
+
+            
+
+
+            // worstruns=teamIndia.find((Worst)=>{
+            //     return worst.runs <5
+            // })
+            // console.log("worst runs scored by players :-",teamIndia)
+            </script>
+        </fieldset>
+    </div>
+
+    
+
+</body>
+
+</html>
