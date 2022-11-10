@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array-1</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@500&family=Tourney:wght@600&display=swap" rel="stylesheet">
+        <style>
+            *{
+                font-family: 'Poppins', sans-serif;
+            }
+            .Heroes{
+                background-color: aquamarine;
+                font-weight: 600;              
+                text-align: center;
+            }
+        </style>
+</head>
+<body>
+
+    <!-----------------Method__1------------------>
+    <div class="Heroes">
+        <fieldset>
+     <script>
+        function Hero(Prabhas,ChrisHemsworth){
+            this.Favourate1=Prabhas
+            this.Favourate2=ChrisHemsworth
+            this.PrabhasNationality="Indian"
+            this.ChrisHemsworthNationality="Australian"
+        }
+        var popular=new Hero('Prabhas','ChrisHemsworth',)
+        for(a in popular){
+            document.write(a+' :-- '+popular[a]+'<br>')
+        }
+     </script>
+     </fieldset>
+     </div>
+
+
+
+    <!------------------Method__2-(ARRAY concept)-------------->
+
+    <div>
+        <fieldset>
+            <script>
+                var Heroes=['Prabhas','Jonny Depp','Chris Hemsworth',]
+                for(i=0;i<Heroes.length;i++){
+                    document.write(Heroes[i]+'<br>')
+                }
+            </script>
+        </fieldset>
+    </div>
+
+
+    <!-----------Using Different Methods-------------->
+    <div>
+        <fieldset>
+            <script>
+                var Heroes=['Prabhas','Jonny Depp','Chris Hemsworth'];
+                
+                Heroes.push("Henry Cavill"+'<br>'+'Gal Gadot')
+                Heroes.unshift('Chris Ivans')
+                Heroes[4]='Keane Reeves'
+                Heroes.splice(3,0,'Jason Stathum')
+                Heroes.pop()
+                Heroes.shift()
+                Heroes.splice(1,0)
+                Heroes.sort()
+                Heroes.reverse()
+
+
+                for(i=0;i<Heroes.length;i++){
+                    document.write(Heroes[i]+'<br>')                   
+                }
+                
+                
+                console.log(Heroes)
+            </script>
+        </fieldset>
+    </div>
+
+    <div>
+        <fieldset>
+            <script>
+                var Heroes=['Prabhas','JonnyDepp','ChrisHemsworth','Henry Cavill','GalGadot','Keane Reeves'];
+
+                Heroes.forEach((HeroesName,index,arr) => {
+                document.write(HeroesName+'<br>'+arr)
+                });
+            </script>
+        </fieldset>
+    </div>
+    
+</body>
+</html>
