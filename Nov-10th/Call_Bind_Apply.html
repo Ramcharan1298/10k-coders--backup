@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call_Bind_Apply</title>
+</head>
+<body>
+    <script>
+
+        //-----Call Method--------
+        
+       var Ram={
+          fname:'Ram',
+          lname:'Charan',
+       }
+       var Henry={
+        fname:'Henry',
+        lname:'Cavill',
+       }
+       
+       
+       function fullname(){
+        console.log('fullname :--'+this.fname+this.lname)        
+       }
+       
+
+       console.log('----------           Call Method---------')
+       fullname.call(Ram)
+       fullname.call(Henry)
+
+    //    for(a in Ram){
+    //   document.write('fullname :-'+Ram[a])
+    // }
+       
+    //    document.write('Call Method')
+
+    //    for(a in Ram){
+    //     document.write(this.Ram[a],'<br>')
+    //    }
+    //    for(b in Henry){
+    //     document.write(Henry[b])
+    //    }
+    </script>
+    
+    
+    
+    
+    <script>
+        //---------Bind Method---------
+        
+    var Chris={
+        fname:'Chris',
+        lname:'Hemsworth',
+    }
+
+    var Jonny={
+        fname:'Jonny',
+        lname:'Depp',
+    }
+
+    function fullname(){
+        console.log('FullName :--'+this.fname+' '+this.lname)
+    }
+    
+    console.log('----------Bind Method       ----------')
+    var firstfullname=fullname.bind(Chris)
+     firstfullname()
+    var secondfull=fullname.bind(Jonny)
+    secondfull()
+    </script>
+
+    
+    
+    
+    
+    
+    
+    <script>
+
+     //----------Apply Method-----------
+    var Gal={
+        fname:'Gal',
+        lname:'Gadot',
+    }
+
+    var Ryan={
+        fname:'Ryan',
+        lname:'Reynolds',
+    }
+
+    function FullName(...hero){
+        console.log('FullName :--'+this.fname+' '+this.lname)
+        console.log(hero)
+    }
+
+    console.log('----------Apply Method       ----------')
+    FullName.apply(Gal,['Prabhas','Ram','Srinu'])
+    FullName.apply(Ryan,['Jason Stathum','Keane Reeves','Chris Ivans'])
+</script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Numbers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@500&family=Tourney:wght@600&display=swap" rel="stylesheet">
+        <style>
+            *{
+                font-family: 'Poppins', sans-serif;
+            }
+        </style>
+</head>
+<body>
+    
+    <fieldset>
+    <script>
+        
+        var Random = Math.random()*10000;
+
+        console.log('The Random Values :-',Random)  
+        document.write('The Random Values :-'+'<mark>'+Random+'</mark>'+'<br>')      
+        
+        console.log('The Round Figure :-',Math.round(Random))
+        document.write('The Round Figure :-'+'<mark>'+Math.round(Random)+'</mark>'+'<br>')  
+        
+        console.log('The Least Round Figure :-',Math.floor(Random))
+        document.write('The Least Round Figure :-'+'<mark>'+Math.floor(Random)+'</mark>'+'<br>')  
+        
+        console.log('The Highest Round Figure :-',Math.ceil(Random))
+        document.write('The Highest Round Figure :-'+'<mark>'+Math.ceil(Random)+'</mark>'+'<br>')  
+    
+    </script>
+    </fieldset>
+   
+   
+   
+    <fieldset>
+    <script>
+        
+        //Taking Random Numbers------
+        var RandomNumbers = []
+        for(i=0;i<6;i++){
+            var randomnumber =Math.round(Math.random()*10000)
+            RandomNumbers.push(randomnumber)
+        }
+        console.log('The Random Values :-',RandomNumbers)
+        document.write('<br>'+'Random Values of an Empty Array(By Using the For Loop)'+'<br>')
+        document.write('The Random Values :-'+'<mark>'+RandomNumbers+'</mark>'+'<br>')  
+
+     
+     
+     
+     //-----------Math.min and Math.max methods-----------
+
+    
+     //---------Math.min Method-----------
+       
+        var NormalValues=[5627, 9870, 9698, 6171, 4056, 1505]
+           console.log(NormalValues)
+         
+        // var minnumber = Math.min(...NormalValues)
+        // console.log(...NormalValues)
+        
+        var minnumbers=Math.min(5627, 9870, 9698, 6171, 4056, 1505)//finding the minimum number value in the given array by using the Math.min
+        document.write('<br>'+'Taking the Random Values of an Output :-'+'<br>')
+        document.write('Random Values Of an Output :--'+'<mark>'+'[5627, 9870, 9698, 6171, 4056, 1505]'+'</mark>'+'<br>')
+        console.log('Minimum Number in the Array :--',minnumbers)
+        document.write('Minimum Number in the Array :--'+'<mark>'+minnumbers+'</mark>'+'<br><br>')
+        
+        
+        
+        var minnumbers=Math.round(5627, 9870, 9698, 6171, 4056, 1505)//round the number
+        console.log('Round Figure Method :--',minnumbers)
+        document.write('Round Figure Value in the Array :--'+'<mark>'+minnumbers+'</mark>'+'<br><br>')
+
+
+        
+        var minnumbers=Math.floor(5627, 9870, 9698, 6171, 4056, 1505)//taking the least value of given array
+        console.log('Floor Method(The Least Round Figure) :--',minnumbers)
+        document.write('Floor Method(The Least Round Figure) :--'+'<mark>'+minnumbers+'</mark>'+'<br><br>')
+
+    //----------Math.max Method------------
+    
+         var maxones=Math.max(5627, 9870, 9698, 6171, 4056, 1505)
+         console.log('Maximum Number in the Array :--',maxones)
+         document.write('Maximum Value in the Array :--'+'<mark>'+maxones+'</mark>'+'<br><br>')
+    </script>
+    
+    
+    
+    
+    
+    <script>
+      
+        var puzzlenumbers=[]
+
+        //    for(i=0;puzzlenumbers<5;i++){
+        //      var puzzle=Math.round(Math.random()*100000)
+             
+        //         puzzlenumbers.push(puzzle)
+            
+        //    }
+        //    console.log(puzzlenumbers)
+       
+         while(puzzlenumbers.length<6){
+            var puzzle=Math.round(Math.random()*100000)
+            if(String(puzzle).length==4){
+                puzzlenumbers.push(puzzle)
+            }
+         }
+         console.log(puzzlenumbers)
+         document.write('The Random Values of an Empty Array(By using the While Loop) :--'+'<mark>'+puzzlenumbers+'</mark>')
+
+    </script>
+    </fieldset>
+</body>
+</html>
