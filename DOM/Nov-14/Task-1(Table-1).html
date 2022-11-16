@@ -95,11 +95,11 @@
 
         if (removablenames.length == 0) {
             removablenames = fullnames.filter((user, index) => {
-                return user.id !== fullnames[i].id;
+                return user.fname !== fullnames[i].fname;
             });
         } else {
             removablenames = removablenames.filter((user, index) => {
-                return user.id !== removablenames[i].id;
+                return user.fname !== removablenames[i].fname;
             });
         }
        
@@ -107,7 +107,7 @@
       }
       display(fullnames)
     
-      
+      function edituser(){}
     </script>
 </body>
 </html>
