@@ -118,7 +118,8 @@
             }
         ]
         var removablenames = [];
-        function displayUsers(i) {
+        function displayUsers(userDetails) {
+        document.querySelector('tbody').innerHTML='';
 
             userDetails.forEach((charan, i) => {
                 var row = document.createElement('tr')
@@ -135,25 +136,21 @@
                 var deleteTd = document.createElement('td');
                 var deleteBtn = document.createElement('button');
                 deleteBtn.innerHTML = ('Delete');
-                deleteBtn.setAttribute('onclick', 'removeuser(' + i + ')');
+                deleteBtn.setAttribute('onclick', 'deleteUser(' + i + ')');
                 deleteTd.appendChild(deleteBtn);
                 row.appendChild(deleteTd);
             
             })
         }
-
-
-
-
-        function editUser(i) {
+        function deleteUser(i) {
 
             if (removablenames.length == 0) {
                 removablenames = userDetails.filter((charan, index) => {
-                    return charan.id !== userDetails[i].id;
+                    return charan.tel !== userDetails[i].tel;
                 });
             } else {
                 removablenames = removablenames.filter((charan, index) => {
-                    return charan.id !== removablenames[i].id;
+                    return charan.tel !== removablenames[i].tel;
                 });
             }
 

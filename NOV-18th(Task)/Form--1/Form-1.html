@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-1</title>
+    <link rel="stylesheet" href="style1.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@500&family=Tourney:wght@600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    
+        <div class="container">
+            <fieldset>
+               <legend>Registration Details</legend>
+                
+               <form>
+            
+                    <div class="University">
+                <label for="">University :</label>
+                <input type="text" name="Uname" id="Uname"><br><br>
+            </div>
+            
+            
+            
+            <div class="Institute">
+                <label for="">Institute :</label>
+                <input type="text" name="" id="Iname"><br><br>
+            </div>
+            
+            
+            
+            <div class="Branch">
+                <label for="">Branch :</label>
+                <select class="sel" id="branch">   
+                    <option value="" >---select---</option>
+                    <option value="" >CSE</option>
+                    <option value="" >ECE</option>
+                    <option value="" >EEE</option>
+                </select><br><br>
+            </div>
+            
+            
+            <div class="degree">
+                <label for="">Degree:</label>
+                <select id="deg">
+                    <option value="" >---select---</option>
+                    <option value="" >Btech</option>
+                    <option value="" >Mtech</option>
+                </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="degree">Pursuing
+                <input type="radio" name="degree" id="degreee" checked>Completed <br><br>
+            </div>
+            
+            
+            
+            <div class="average">
+                <label for="" id="avg">AverageCPI :</label>
+                <input type="number" id="average" min="1" max="80">&nbsp;&nbsp;Upto
+                <input type="number" id="average" min="1" max="10">Th Semester
+                <br><br>
+            </div> 
+            
+            
+            <div class="experience">
+                 <label for="" id="ex">Experience:</label>
+                 <input type="number" id="exp" min="1" max="20">&nbsp;&nbsp;Years <br><br>
+            </div>
+            
+            
+            
+            <div class="website">
+                <label for="" id="we">YourWebsiteOrBlog:</label>
+                <input type="text" id="web" placeholder="http://">
+            </div><br><br>
+
+            <button type="button" onclick="SubDetails()"  style="background-color: rgb(247, 15, 247);" id="web">Submit Details</button>
+        </form>
+    </fieldset>
+</div>
+      <script>
+           
+           function SubDetails(){
+            
+            var userDetails={
+                
+                University:document.getElementById("Uname").value,
+                Institute:document.getElementById("Iname").value,
+                Branch:document.getElementById("branch").value,
+                Degree:document.getElementById("degreee").value,
+                AverageCPI:document.getElementById("average").value,
+                Experience:document.getElementById("exp").value,
+                YourWebsiteOrBlog:document.getElementById("web").value
+            }
+            
+            
+            console.log("userDetails",userDetails)
+           }
+           
+      </script>
+    
+</body>
+
+</html>

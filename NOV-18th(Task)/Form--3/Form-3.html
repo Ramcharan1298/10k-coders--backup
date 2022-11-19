@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form--3</title>
+    <link rel="stylesheet" href="style3.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@500&family=Tourney:wght@600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <fieldset>
+        <form style="background-color: rgb(164, 164, 243);">
+            <h2>Address</h2>
+            <hr>
+            <div class="Street">
+                <label for="">Street:</label>
+                <input type="text" id="street"><br>
+                <input type="text" id="add"><br><br>
+            </div>
+
+            <div class="city">
+                 <label for="">CityState:</label>
+                 <input type="text" id="city">
+                 <input type="text" id="state"><br><br>
+            </div>
+
+            <div class="zip">
+                 <label for="">Zipcode:</label>
+                 <input type="text" id="Zip"><br><br>
+            </div>
+
+            <div class="country">
+                  <label for="">Country:</label>
+                  <input type="text" id="country"><br><br>
+            </div>
+
+            <button type="button" onclick="getinfo()" style="color: rgb(246, 153, 3);">OK</button>&nbsp;&nbsp;&nbsp;<button>Cancel</button>
+        </form>
+    </fieldset>
+    </div>
+
+    <script>
+        function getinfo(){
+            
+
+            var address={
+                Street:"",
+                CityState:"",
+                Zipcode:"",
+                Country:""
+            }
+            for(a in address){
+                address[a]=document.getElementById('Zip').value
+            }
+            console.log('address' ,address)
+        }
+    </script>
+
+</body>
+
+</html>

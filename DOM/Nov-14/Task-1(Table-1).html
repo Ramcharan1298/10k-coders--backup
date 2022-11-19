@@ -1,113 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fname & lname</title>
-</head>
-
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table task</title>
+  </head>
+  <body>
     <table border="1">
-        <thead>
-            <tr>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Delete</th>
-            </tr>
-
-        </thead>
-        <tbody></tbody>
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Id</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
     </table>
     <script>
-        var fullnames = [
-            {
-                "fname": "Danyell",
-                "lname": "Star"
-            },
-            {
-                "fname": "Alesia",
-                "lname": "Chapman"
-            },
-            {
-                "fname": "Gail",
-                "lname": "Billanti"
-            },
-            {
-                "fname": "Danielle",
-                "lname": "Buxton"
-            },
-            {
-                "fname": "Chunlei",
-                "lname": "Dominique"
-            },
-            {
-                "fname": "Liset",
-                "lname": "Welchert"
-            },
-            {
-                "fname": "Rakesh",
-                "lname": "Maclatchie"
-            },
-            {
-                "fname": "Geraldine",
-                "lname": "Azzarello"
-            },
-            {
-                "fname": "Karla",
-                "lname": "Darling"
-            },
-            {
-                "fname": "Arshad",
-                "lname": "Planty"
-            }
-        ]
+      var fullnames = [
+        {
+          fname: "Danyell",
+          lname: "Star",
+          id: 1,
+        },
+        {
+          fname: "Alesia",
+          lname: "Chapman",
+          id: 2,
+        },
+        {
+          fname: "Gail",
+          lname: "Billanti",
+          id: 3,
+        },
+        {
+          fname: "Danielle",
+          lname: "Buxton",
+          id: 4,
+        },
+        {
+          fname: "Chunlei",
+          lname: "Dominique",
+          id: 5,
+        },
+        {
+          fname: "Liset",
+          lname: "Welchert",
+          id: 6,
+        },
+        {
+          fname: "Rakesh",
+          lname: "Maclatchie",
+          id: 7,
+        },
+        {
+          fname: "Geraldine",
+          lname: "Azzarello",
+          id: 8,
+        },
+        {
+          fname: "Karla",
+          lname: "Darling",
+          id: 9,
+        },
+        {
+          fname: "Arshad",
+          lname: "Planty",
+          id: 10,
+        },
+      ];
 
-      var removablenames = [];
-      function display(fullnames) {
-        document.querySelector("tbody").innerHTML = " ";
-        
-        fullnames.forEach((user, i) => {
-            var row = document.createElement("tr")
+        var filteredarray = [];
+        function display(fullnames){
+          document.querySelector("tbody").innerHTML = "";
 
-            var myTd = document.createElement("td");
-            myTd.innerHTML = user.fname
-            row.appendChild(myTd)
-
-            var myTd = document.createElement("td");
-            myTd.innerHTML = user.lname
-            row.appendChild(myTd)
-
-
-            var deleteTd = document.createElement('td');
-            var deleteBtn = document.createElement('button');
-            deleteBtn.innerHTML = 'Delete';
-            deleteBtn.setAttribute('onclick', 'deleteuser(' + i + ')');
-            deleteTd.appendChild(deleteBtn);
-            row.appendChild(deleteTd);
-
-            document.querySelector('tbody').appendChild(row)
-        })
-    }
-      
-    function deleteUser(i){
-
-        if (removablenames.length == 0) {
-            removablenames = fullnames.filter((user, index) => {
-                return user.fname !== fullnames[i].fname;
-            });
-        } else {
-            removablenames = removablenames.filter((user, index) => {
-                return user.fname !== removablenames[i].fname;
-            });
+         fullnames.forEach((user,i) => {
+        var myTr = document.createElement("tr");
+        for (a in user) {
+          var myTd = document.createElement("td");
+          myTd.innerHTML = user[a];
+          myTr.appendChild(myTd);
         }
-       
-        display(removablenames)
-      }
-      display(fullnames)
-    
-      function edituser(){}
+
+          var deleteTd = document.createElement("td");
+          var deleteBtn = document.createElement("button");
+          deleteBtn.setAttribute("onclick", "deleteUser(" + i + ")");
+          deleteBtn.innerHTML = "Delete";
+          deleteTd.appendChild(deleteBtn);
+          myTr.appendChild(deleteTd);
+
+        document.querySelector("tbody").appendChild(myTr);
+        });
+        }
+
+        function deleteUser(i) {
+            console.log("delete index:",i)
+          if (filteredarray.length == 0) {
+              filteredarray = fullnames.filter((user, index) => {
+              return user.fname !== fullnames[i].fname;
+            });
+          } else {
+              filteredarray = filteredarray.filter((user, index) => {
+              return user.fname !== filteredarray[i].fname;
+            });
+          }
+
+          display(filteredarray);
+        }
+        display(fullnames);
     </script>
-</body>
+  </body>
 </html>

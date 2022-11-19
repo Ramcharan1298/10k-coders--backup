@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form--2</title>
+    <link rel="stylesheet" href="style2.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@500&family=Tourney:wght@600&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    
+        <div class="container">
+            <Fieldset>
+            <form>
+                <div class="Fname">
+                     <h1>HTML Form</h1>
+
+                     <div class="Fname">
+                        <label for="">First_Name:</label>
+                        <input type="text" id="fname"><br><br>
+                     </div>
+
+                     <div class="Lname">
+                         <label for="">Last_name:</label>
+                         <input type="text" id="lname"><br><br>
+                     </div>
+
+                     <div class="date">
+                        <label for="">Date_of_Birth:</label>
+                        <input type="text" id="date"><br><br>
+                    </div>
+
+                    <div class="email">
+                        <label for="">Email_id:</label>
+                        <input type="text" id="email"><br><br>
+                    </div>
+
+                    <div class="mobile">
+                        <label for="">Mobile_Number:</label>
+                        <input type="text" id="mobile"><br><br><br>
+                    </div>
+
+                    <div class="button">
+                         <button type="button" onclick="getuser()">SUBMIT</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>RESET</button>
+                    </div>
+                </div>
+             </form>
+            </Fieldset>
+        </div>
+
+
+        <script>
+            function getuser(){
+                var submit={
+                    First_Name:"",
+                    Last_name:"",
+                    Date_of_Birth:"",
+                    Email_id:"",
+                    Mobile_Number:""
+                }
+                for(a in submit){
+                    submit[a]=document.getElementById('mobile').value
+                }
+                console.log('submit' ,submit)
+            }
+        </script>
+    
+</body>
+</html>

@@ -1,0 +1,103 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(104, 104, 243);
+    color: rgb(11, 6, 6);
+    border-radius: 5px;
+    color: white;
+    /* text-align: center; */
+    /* justify-content: center; */
+}
+label{
+    display: inline-block;
+    width: 120px;
+}
+input{
+    color: black;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 70px;
+}
+fieldset{
+    margin: auto;
+    padding-left: 80px;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    padding-right: 60px;
+    border: 2px solid white;
+}
+.Branch{
+    position: relative;
+    right: 73px;
+}
+.degree{
+    position: relative;
+    right: 3px;
+}
+.average{
+    position: relative;
+    right: 40px;
+}
+.experience{
+    position: relative;
+    right: 117px;
+}
+.website{
+    position: relative;
+    right: 29px;
+}
+.sel{
+    width: 200px;
+    position: relative;
+}
+
+
+
+
+#avg{
+    position: relative;
+    right: 20px;
+}
+#ex{
+    position: relative;
+    right: 13px;
+}
+#we{
+    display: inline;
+    position: relative;
+    right: 30px;
+}
+
+
+
+
+#Uname{
+    width: 330px;
+    background-color: white;
+}
+#Iname{
+    width: 330px;
+    background-color: white;
+}
+#average{
+    width: 50px;
+    background-color: white;
+}
+select{
+    background-color: white;
+    color: black;
+}
+#exp{
+    background-color: white;
+    position: relative;
+    width: 50px;
+}
+#web{
+    background-color: white;
+    width: 330px;
+}
+
+
+
