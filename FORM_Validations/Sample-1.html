@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form>
+            <label for="fname">First Name :</label>
+            <input type="text" id="fname" onkeyup="checkuserinput()"><br><br>
+            <label for="lname">Last Name :</label>
+            <input type="text" id="lname" onkeyup="checkuserinput()"><br>
+            <button type="button" onclick="createuser()" disabled >Create</button>
+        </form>
+    </div>
+
+    <script>
+        function checkuserinput(){
+            // console.log('show me the user When I click!!!')
+            var userenter = document.getElementById("fname").value
+            console.log(userenter)
+            if(userenter.length >=7 && userenter.length >=4){
+                document.querySelector('button').removeAttribute('disabled')  
+            }else{
+                
+            }
+        }
+    </script>
+</body>
+</html>

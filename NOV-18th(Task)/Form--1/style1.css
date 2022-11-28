@@ -30,15 +30,15 @@ fieldset{
 }
 .Branch{
     position: relative;
-    right: 73px;
+    right: 113px;
 }
 .degree{
     position: relative;
-    right: 3px;
+    right: 115px;
 }
 .average{
     position: relative;
-    right: 40px;
+    right: 140px;
 }
 .experience{
     position: relative;
@@ -46,12 +46,21 @@ fieldset{
 }
 .website{
     position: relative;
-    right: 29px;
+    right: 22px;
 }
 .sel{
     width: 200px;
     position: relative;
 }
+.Status{
+    position: relative;
+    right: 70px;
+}
+.subjects{
+    position: relative;
+    right: 10px;
+}
+
 
 
 
@@ -69,7 +78,10 @@ fieldset{
     position: relative;
     right: 30px;
 }
-
+/* #Status{
+    position: relative;
+    right: ;
+} */
 
 
 

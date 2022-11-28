@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            display: inline-block;
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="table">
+      <table border="1px">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Image</th>
+                <th>Rating</th>
+                <th>EDIT</th>
+                <th>DELETE</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div><br><br>
+
+    <button onclick="getfromserver()">GET THE DATA</button><br><br>
+
+    <div id="userform">
+         
+         <label for="id">ID:</label>
+         <input type="text" name="" id="id" disabled><br><br>
+         
+         <label for="title">Title:</label>
+         <input type="text" name="" id="title"><br><br>
+         
+         <label for="price">Price:</label>
+         <input type="text" name="" id="price"><br><br>
+         
+         <label for="description">Description:</label>
+         <input type="text" name="" id="description"><br><br>
+         
+         <label for="category">Category:</label>
+         <input type="text" name="" id="category"><br><br>
+         
+         <label for="image">Image:</label>
+         <input type="text" name="" id="image"><br><br>
+         
+         <label for="rating">Rating:</label>
+         <input type="text" name="" id="rating"><br><br>
+    
+    </div>
+    <script>
+        var Host_Url='http://localhost:3000/details';
+
+        var users = [];
+        function getfromserver(){
+            // console.log('getfromserver called from Server!!!!!');           
+            var graspdata = new XMLHttpRequest();
+            graspdata.onreadystatechange = function (){
+                if(graspdata.readyState ==4 && graspdata.status ==200){
+                    users = JSON.parse(graspdata.response);
+                    console.log(users);
+                }
+            }
+            graspdata.open('GET',Host_Url);
+            graspdata.send();
+        }
+        getfromserver()
+
+       
+       
+       
+        function displayUsers(users) {
+       document.querySelector('tbody').innerHTML='';
+
+        clothing.forEach((brand ,i) => {
+            // console.log(clothing)  
+            var row = document.createElement('tr')
+            for (a in brand) {
+                var column = document.createElement('td')
+
+                if (a !== 'image' && a !== 'rating') {
+                    column.innerHTML = brand[a]
+                    row.appendChild(column)
+
+                } else if (a == 'image') {
+                    var myImage = document.createElement('img')
+                    myImage.setAttribute('src', brand[a])
+                    column.appendChild(myImage)
+                    row.appendChild(column)
+
+                } else if (a == 'rating') {
+                    var rateobject = brand[a]
+                    for (b in brand[a]) {
+                        var ratingcolumn = document.createElement('td')
+                        ratingcolumn.innerHTML = rateobject[b]
+                        row.appendChild(ratingcolumn)
+                    }
+                }
+            }
+
+            document.querySelector('tbody').appendChild(row)
+
+            var deleteTd=document.createElement('td')
+            var deleteBtn=document.createElement('button')
+            deleteBtn.setAttribute('onclick','deleteUser('+i+')')
+            deleteBtn.innerHTML='Delete';
+            deleteTd.appendChild(deleteBtn)
+            row.appendChild(deleteTd)
+            
+        })
+    }
+    
+    
+    
+    function deleteUser(i){           
+        var delusers =  new XMLHttpRequest();
+        delusers.onreadystatechange = function (){
+            if(delusers.readyState =4 && delusers.status ==200){
+                getfromserver();
+            }
+        };
+        delusers.open("DELETE",Host_Url+users[i].id);
+        delusers.send();
+    }
+    displayUsers(users);
+        // function displayUsers(users){
+        //      document.querySelector('tbody').innerHTML='';
+        //      users.forEach((user , i)=>{
+        //          var row = document.createElement('tr')
+        //         for(a in user){
+        //             var myTd = document.createElement('td')
+        //             if(a !==a)
+        //         } 
+        //      })
+        // }
+
+
+
+
+    </script>
+</body>
+</html>

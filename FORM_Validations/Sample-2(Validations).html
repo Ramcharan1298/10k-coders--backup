@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" onkeyup="validform()"><br>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" onkeyup="validform()"><br>
+        <button onclick="getdetails()" disabled>CREATE</button><br>
+    </form>
+
+    <script>
+        function validform(){
+            var user = {
+                fname:"",
+                lname:"",
+            }
+            for(a in user){
+                user[a] = document.getElementById(a).value;
+            }
+            var checkingvalue = true;
+            
+            if(user.fname.length < 6 || user.lname.length < 4){
+                checkingvalue = false;
+            }
+            console.log(checkingvalue)
+
+            if(checkingvalue){
+                document.querySelector('button').removeAttribute('disabled')
+            }else{
+                document.querySelector('button').setAttribute('disabled',true)
+            }
+        }
+    </script>
+</body>
+</html>

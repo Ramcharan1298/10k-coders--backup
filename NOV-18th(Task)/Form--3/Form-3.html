@@ -28,13 +28,13 @@
             </div>
 
             <div class="city">
-                 <label for="">CityState:</label>
+                 <label for="">City State:</label>
                  <input type="text" id="city">
                  <input type="text" id="state"><br><br>
             </div>
 
             <div class="zip">
-                 <label for="">Zipcode:</label>
+                 <label for="">Zip code:</label>
                  <input type="text" id="Zip"><br><br>
             </div>
 
@@ -43,27 +43,113 @@
                   <input type="text" id="country"><br><br>
             </div>
 
-            <button type="button" onclick="getinfo()" style="color: rgb(246, 153, 3);">OK</button>&nbsp;&nbsp;&nbsp;<button>Cancel</button>
+            <button type="button" onclick="getuser()" style="color: rgb(48, 3, 246);">OK</button>&nbsp;&nbsp;&nbsp;<button>Cancel</button>
         </form>
     </fieldset>
+    </div><br><br>
+
+    <div id="userTable">
+         <table border="1">
+            <thead>
+                <tr>
+                    <th>Street</th>
+                    <th> City,State</th>
+                    <th>Zip Code</th>
+                    <th>Country</th>
+                    <th>EDIT</th>
+                    <th>DELETE</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+         </table>
     </div>
 
     <script>
-        function getinfo(){
+        
             
 
             var address={
-                Street:"",
-                CityState:"",
-                Zipcode:"",
-                Country:""
+                street:"",
+                city:"",
+                Zip:"",
+                country:"",
             }
-            for(a in address){
-                address[a]=document.getElementById('Zip').value
+            var users=[];
+        function getuser(){
+            var dataprint = {...address}
+            for(a in dataprint){
+                dataprint[a]=document.getElementById(a).value;
             }
-            console.log('address' ,address)
+            users.push(dataprint);
+            console.log(users)
+            displayUsers(users)
+            clearForm();
         }
     </script>
+
+
+
+<script>
+    //--------READ JS----------
+    function displayUsers(users) {
+        document.querySelector('tbody').innerHTML = ''
+
+        users.forEach((myUser, i) => {
+            var row = document.createElement('tr')
+            for (a in myUser) {
+                var myTd = document.createElement('td');
+                myTd.innerHTML = myUser[a]
+                row.appendChild(myTd)
+            }
+            var editTd = document.createElement("td");
+            var editBtn = document.createElement("button");
+            editBtn.setAttribute('onclick','editUser('+i+')')
+            editBtn.innerHTML = "EDIT";
+            editTd.appendChild(editBtn);
+            row.appendChild(editTd);
+
+            var deleteTd = document.createElement("td");
+            var deleteBtn = document.createElement("button");
+            deleteBtn.setAttribute("onclick", "deleteUser(" + i + ")");
+            deleteBtn.innerHTML = "DELETE";
+            deleteTd.appendChild(deleteBtn)
+            row.appendChild(deleteTd);
+
+
+            document.querySelector('tbody').appendChild(row)
+        })
+    }        
+    
+    
+    function clearForm(){
+        users.forEach((Element)=>{
+            for(b in Element){
+                document.getElementById(b).value="";
+            }
+        })
+        
+    }
+</script>
+
+<script>
+    function deleteUser(i){ 
+        // console.log('delete user called',i) 
+        users=users.filter((usr,index)=> i !==index);
+        displayUsers(users)    
+    }
+</script>
+
+
+
+<script>
+    function editUser(i){
+        var newUser = users[i]
+
+        for( a in newUser){
+            document.getElementById(a).value=newUser[a]
+        }
+    }
+</script>
 
 </body>
 

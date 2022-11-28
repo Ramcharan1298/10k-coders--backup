@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,67 +10,155 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@500&family=Tourney:wght@600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@500&family=Tourney:wght@600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
+    <div id="userDetails">
         <div class="container">
             <Fieldset>
-            <form>
-                <div class="Fname">
-                     <h1>HTML Form</h1>
+                <form>
+                    <div class="Fname">
+                        <h1>HTML Form</h1>
 
-                     <div class="Fname">
-                        <label for="">First_Name:</label>
-                        <input type="text" id="fname"><br><br>
-                     </div>
+                        <div class="Fname">
+                            <label for="">First Name:</label>
+                            <input type="text" id="fname"><br><br>
+                        </div>
 
-                     <div class="Lname">
-                         <label for="">Last_name:</label>
-                         <input type="text" id="lname"><br><br>
-                     </div>
+                        <div class="Lname">
+                            <label for="">Last name:</label>
+                            <input type="text" id="lname"><br><br>
+                        </div>
 
-                     <div class="date">
-                        <label for="">Date_of_Birth:</label>
-                        <input type="text" id="date"><br><br>
+                        <div class="date">
+                            <label for="">Date of Birth:</label>
+                            <input type="text" id="date"><br><br>
+                        </div>
+
+                        <div class="email">
+                            <label for="">Email id:</label>
+                            <input type="text" id="email"><br><br>
+                        </div>
+
+                        <div class="mobile">
+                            <label for="">Mobile Number:</label>
+                            <input type="text" id="mobile"><br><br><br>
+                        </div>
+
+                        <div class="button">
+                            <button type="button"
+                                onclick="getuser()">SUBMIT</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>RESET</button>
+                        </div>
                     </div>
-
-                    <div class="email">
-                        <label for="">Email_id:</label>
-                        <input type="text" id="email"><br><br>
-                    </div>
-
-                    <div class="mobile">
-                        <label for="">Mobile_Number:</label>
-                        <input type="text" id="mobile"><br><br><br>
-                    </div>
-
-                    <div class="button">
-                         <button type="button" onclick="getuser()">SUBMIT</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>RESET</button>
-                    </div>
-                </div>
-             </form>
+                </form>
             </Fieldset>
         </div>
+    </div><br><br><br>
 
+    <div id="userTable">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last name</th>
+                    <th>Date of Birth</th>
+                    <th>Email id</th>
+                    <th>Mobile Number</th>
+                    <th>EDIT</th>
+                    <th>DELETE</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
 
-        <script>
-            function getuser(){
-                var submit={
-                    First_Name:"",
-                    Last_name:"",
-                    Date_of_Birth:"",
-                    Email_id:"",
-                    Mobile_Number:""
-                }
-                for(a in submit){
-                    submit[a]=document.getElementById('mobile').value
-                }
-                console.log('submit' ,submit)
+    <script>
+        //-----------create js------------        
+        var submit = {
+            fname: "",
+            lname: "",
+            date: "",
+            email: "",
+            mobile: ""
+        }
+        var users=[];
+        function getuser(){
+            var dataprint = {...submit}
+            for(a in dataprint){
+                dataprint[a]=document.getElementById(a).value;
             }
-        </script>
-    
+            users.push(dataprint);
+            console.log(users)
+            displayUsers(users)
+            clearForm();
+        }
+    </script>
+
+
+
+    <script>
+        //--------READ JS----------
+        function displayUsers(users) {
+            document.querySelector('tbody').innerHTML = ''
+
+            users.forEach((myUser, i) => {
+                var row = document.createElement('tr')
+                for (a in myUser) {
+                    var myTd = document.createElement('td');
+                    myTd.innerHTML = myUser[a]
+                    row.appendChild(myTd)
+                }
+                var editTd = document.createElement("td");
+                var editBtn = document.createElement("button");
+                editBtn.setAttribute('onclick','editUser('+i+')')
+                editBtn.innerHTML = "EDIT";
+                editTd.appendChild(editBtn);
+                row.appendChild(editTd);
+
+                var deleteTd = document.createElement("td");
+                var deleteBtn = document.createElement("button");
+                deleteBtn.setAttribute("onclick", "deleteUser(" + i + ")");
+                deleteBtn.innerHTML = "DELETE";
+                deleteTd.appendChild(deleteBtn)
+                row.appendChild(deleteTd);
+
+
+                document.querySelector('tbody').appendChild(row)
+            })
+        }        
+        
+        
+        function clearForm(){
+            users.forEach((Element)=>{
+                for(b in Element){
+                    document.getElementById(b).value="";
+                }
+            })
+            
+        }
+    </script>
+  
+
+    <script>
+        function deleteUser(i){ 
+            // console.log('delete user called',i) 
+            users=users.filter((usr,index)=> i !==index);
+            displayUsers(users)    
+        }
+    </script>
+
+
+
+    <script>
+        function editUser(i){
+            var newUser = users[i]
+
+            for( a in newUser){
+                document.getElementById(a).value=newUser[a]
+            }
+        }
+    </script>
 </body>
+
 </html>

@@ -128,7 +128,7 @@
         "__v": 0
       },
       {
-        "id": 6,
+        "id": 7,
         "userId": 8,
         "date": "2020-03-01T00:00:02.000Z",
         "products": [
@@ -191,11 +191,11 @@
     function deleteUser(i) {
       if (removablenames.length == 0) {
         removablenames = Details.filter((items, index) => {
-          return items.products !== Details[i].products;
+          return items.id !== Details[i].id;
         })
       } else {
         removablenames = Details.filter((items, index) => {
-          return items.products !== removablenames[i].products;
+          return items.id !== removablenames[i].id;
         })
       }
       displayUsers(removablenames);
