@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 430px;
+            height: 640px;
+            cursor: pointer;
+        }
+        div{
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+       <img src="" alt="">
+    </div>
+
+    <script>
+        document.querySelector("img").setAttribute("src","1.jpg")
+
+        function slideimage(){
+            var addressofimage = document.querySelector("img").src
+            console.log(addressofimage)
+            var numberofimage = addressofimage.substr(addressofimage.lastIndexOf("/")+1,"1")
+            if(numberofimage == 7){
+                numberofimage = 0
+            }
+            numberofimage++;
+            document.querySelector("img").setAttribute("src", numberofimage + ".jpg")
+        }
+        
+
+        
+
+
+        function startslide(){
+            sliding = setInterval(() => {
+               slideimage()
+        }, 1000);
+        }
+
+        function stopslide(){
+            clearInterval(sliding)
+        }
+
+
+        document.querySelector("img").onmouseover = function(){
+            stopslide()
+        }
+
+        document.querySelector("img").onmouseout = function(){
+            startslide()
+        }
+        startslide
+    </script>
+</body>
+
+</html>
