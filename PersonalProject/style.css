@@ -1,0 +1,45 @@
+*{
+    font-family: 'poppins',sans-serif;
+}
+
+.container{
+    padding-top: 180px;
+    text-align: center;
+}
+
+#Task{
+    width: 260px;
+}
+
+#category{
+    width: 260px;
+    height: 30px;
+    /* color: gray; */
+}
+
+#jira{
+    width: 114px;
+}
+
+#Assigne{
+    height: 30px;
+}
+
+#Status{
+    height: 30px;
+}
+#date{
+    height: 30px;
+}
+#mock{
+    width: 675px;
+}
+
+.btn{
+    text-align: center;
+    background-color: rgb(255, 30, 0);
+    width: 675px;
+    color: white;
+    border-radius:0;
+    /* opacity: 0.9; */
+}

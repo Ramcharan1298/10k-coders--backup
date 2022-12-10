@@ -82,18 +82,6 @@
   ],
   "details": [
     {
-      "id": 1,
-      "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-      "price": 109.95,
-      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-      "category": "men's clothing",
-      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-      "rating": {
-        "rate": 3.9,
-        "count": 120
-      }
-    },
-    {
       "id": 2,
       "title": "Mens Casual Premium Slim Fit T-Shirts ",
       "price": 22.3,
@@ -478,7 +466,7 @@
   "prabhas": [
     {
       "id": 1,
-      "heroname": "Prabhas",
+      "heroname": "Prabhas Raju",
       "MovieName": "Varsham",
       "image": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/varsham-telugu-et00312314-02-07-2021-11-36-02.jpg",
       "RoleName": "venkat",
@@ -574,6 +562,15 @@
       "RoleName": "salaar",
       "Released": "sep 28th, 2023",
       "Director": "prashanth neel"
+    },
+    {
+      "id": 12,
+      "heroname": "Uppalapati prabhas raju",
+      "MovieName": "",
+      "image": "",
+      "RoleName": "",
+      "Released": "",
+      "Director": ""
     }
   ],
   "avengers": [
@@ -928,7 +925,7 @@
     },
     {
       "id": 2,
-      "player": "Virat Kohli",
+      "player": "ram",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFEMG3RIsYYPc5e25F4NAMSXK9Z0NRKPmJ1w&usqp=CAU",
       "matches": "263*",
       "highest": "183",
@@ -998,15 +995,16 @@
     },
     {
       "id": 9,
-      "title": "turtle neck ",
-      "price": "200",
-      "description": "good for height people",
-      "category": "tshirts",
-      "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYWFRgWFRYZGRgaGRocHBwcGhgaHBweISEaHBweHBwhJC4lHB4rIRoaJjgmKy8xNTU1HCQ7QDs0Py40NTEBDAwMEA8QHhISHjQrJCs0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIALABHgMBIgACEQEDEQH/xAAcAAACAwEBAQEAAAAAAAAAAAAEBQIDBgcBAAj/xAA6EAACAQIEAwYFAwQBBAMBAAABAhEAAwQSITEFQVEGImFxgZETMqGx8ELB0RRSYuFyBxUjgpKi8bL/xAAZAQADAQEBAAAAAAAAAAAAAAABAgMABAX/xAAlEQACAgICAQUBAAMAAAAAAAAAAQIRAyESMUEEEyJRYTIUcfD/2gAMAwEAAhEDEQA/AFtqZpzgrcml9tZg01wjgaE10sgFm3qJom3aqNhZo+3b0pR6IW7NXDCnlV6WtPCrkQHzoWGivDqelM7CaChEcqZG/wB6NwxzDX9valZgpTVV9wBJOnXb61YTFc97ddrltF7SMc6jKANgSNWY+ogDprvSpBbHuJ7UqhIGQ5ZzMzACBz6t5DoaUXe3+ZC9tIyyGzicsQNgdTJGn76VyPE8Qd9WYlpmdvtuaCdz+cqNIGzsnDv+oSlwt3QGAGIyeEnSB+a1tsLxO3cQOjSu09PP3Ffl18a+2Yx0kge1N+C8ca2CpaDBKnXU9G1gganWftWpG2j9LKwIkUDxPB512FZrsR23t4m0FvuiXw+Qj5VY6spWdiVB06qa1N7HoNAZmtG70CVNbOc8X4aQfl061mMchU7bV1rH49cpUgGecVjuJYUN5Hp+bV1J32c7X0Z3s/jvhX7dyJyOCR1Gx9YJrttm4rorLqrAEeIOorircOYOqCMxO2gifHpznat/2f7UYZLSWrlyHSVJAYpoTHeAgiOdRyR+h8UqbTNeB",
-      "rating": "9.5"
+      "player": "Shreyas Iyer",
+      "image": "",
+      "matches": "",
+      "highest": "",
+      "hundreds": "",
+      "fifties": "",
+      "totalruns": ""
     }
   ],
-  "jsonplace": [
+  "placehold": [
     {
       "userId": 1,
       "id": 1,
@@ -1014,10 +1012,10 @@
       "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
     },
     {
-      "userId": 1,
+      "userId": "1",
       "id": 2,
-      "title": "qui est esse",
-      "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+      "title": "Tollywood flim industry",
+      "body": "est rerum tempore vitaesequi sint nihil reprehenderit dolor beatae ea dolores nequefugiat blanditiis voluptate porro vel nihil molestiae ut reiciendisqui aperiam non debitis possimus qui neque nisi nulla"
     },
     {
       "userId": 1,
@@ -1068,10 +1066,16 @@
       "body": "quo et expedita modi cum officia vel magni\ndoloribus qui repudiandae\nvero nisi sit\nquos veniam quod sed accusamus veritatis error"
     },
     {
-      "userId": 2,
+      "userId": "8",
       "id": 11,
-      "title": "et ea vero quia laudantium autem",
-      "body": "delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\naccusamus in eum beatae sit\nvel qui neque voluptates ut commodi qui incidunt\nut animi commodi"
+      "title": "cinematic universe",
+      "body": "est natus enim nihil est dolore omnis voluptatem numquamet omnis occaecati quod ullam atvoluptatem error expedita pariaturnihil sint nostrum voluptatem reiciendis et"
+    },
+    {
+      "userId": "1",
+      "id": 12,
+      "title": "cinematic universe",
+      "body": "est natus enim nihil est dolore omnis voluptatem numquamet omnis occaecati quod ullam atvoluptatem error expedita pariaturnihil sint nostrum voluptatem reiciendis et"
     }
   ]
 }

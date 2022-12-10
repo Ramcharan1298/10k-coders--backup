@@ -21,33 +21,22 @@
 
         <form>
             <div class="mb-3">
-                <label for="id" class="form-label">ID</label>
+                <label for="userId" class="form-label">USER_ID</label>
+                <input type="text" class="form-control" id="userId" >
+            </div>
+            <div class="mb-3">
+                <label for="id">ID</label>
                 <input type="text" class="form-control" id="id" disabled>
             </div>
             <div class="mb-3">
-                <label for="title">Title</label>
+                <label for="title">TITLE</label>
                 <input type="text" class="form-control" id="title">
             </div>
             <div class="mb-3">
-                <label for="price">Price</label>
-                <input type="text" class="form-control" id="price">
+                <label for="body">BODY</label>
+                <input type="text" class="form-control" id="body">
             </div>
-            <div class="mb-3">
-                <label for="description">Description</label>
-                <input type="text" class="form-control" id="description">
-            </div>
-            <div class="mb-3">
-                <label for="category">Category</label>
-                <input type="text" class="form-control" id="category">
-            </div>
-            <div class="mb-3">
-                <label for="image">Image</label>
-                <input type="Email" class="form-control" id="image">
-            </div>
-            <div class="mb-3">
-                <label for="rating">Rating</label>
-                <input type="Email" class="form-control" id="rating">
-            </div>
+            
     
             <button onclick="updateuser()" type="button" class="btn btn-primary">UPDATE</button>
         </form>
@@ -66,7 +55,7 @@
             id = null;
          }
 
-         fetch("http://localhost:3000/cricket/" +id)
+         fetch("http://localhost:3000/placehold/" +id)
          .then((response)=>{
             return response.json()
          }).then((user)=>{
@@ -80,7 +69,7 @@
          
          function updateuser(){
             if(id){
-                fetch("http://localhost:3000/cricket/" +id,{
+                fetch("http://localhost:3000/placehold/" +id,{
                     method:"PUT",
                     headers:{
                         "Content-Type":"application/json"
@@ -93,7 +82,7 @@
                     window.location.href="index9.html"
                 })
             }else{
-                fetch("http://localhost:3000/cricket/",{
+                fetch("http://localhost:3000/placehold/",{
                     method:"POST",
                     headers:{
                         "Content-Type":"application/json"
@@ -110,13 +99,10 @@
 
          function collectuser(){
            var newuser={
+            userId:"",
             id:"",
             title:"",
-            price:"",
-            description:"",
-            category:"",
-            image:"",
-            rating:""
+            body:""
            }
             for(a in newuser){
                     newuser[a]=document.getElementById(a).value

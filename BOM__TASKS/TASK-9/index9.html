@@ -14,13 +14,10 @@
     <table class="table">
         <thead>
             <tr>
+                <th>USER__ID</th>
                 <th>ID</th>
-                <th>Title</th>
-                <th>price</th>
-                <th>description</th>
-                <th>category</th>
-                <th>image</th>
-                <th>rating</th>
+                <th>TITLE</th>
+                <th>BODY</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
@@ -34,7 +31,7 @@
     <script>
          var everyuser = [];
          function getdatafromserver(){
-            fetch("http://localhost:3000/details")
+            fetch("http://localhost:3000/placehold")
             .then((response)=>{
                 return response.json()
             }).then((data)=>{
@@ -45,31 +42,29 @@
          }
          getdatafromserver()
 
-         function displayusers(details){
-            details.forEach((user , i)=>{
+         function displayusers(placehold){
+            placehold.forEach((user , i)=>{
                 var row = document.createElement("tr")
                 for(a in user){
-                    if(a ==="image"){
-                        var column = document.createElement("td")
-                        // column.innerHTML = user[a];                   
-                        myImage = document.createElement("img");
-                        myImage.setAttribute("src", user[a]);
-                        myImage.setAttribute("style", "width:100px;" )
-                        column.appendChild(myImage);
-                        row.appendChild(column);
-                    }else {
+                    // if(a ==="image"){
+                    //     var column = document.createElement("td")
+                    //     // column.innerHTML = user[a];                   
+                    //     myImage = document.createElement("img");
+                    //     myImage.setAttribute("src", user[a]);
+                    //     myImage.setAttribute("style", "width:100px;" )
+                    //     column.appendChild(myImage);
+                    //     row.appendChild(column);
+                    // }else 
+                    
                         var column = document.createElement("td")
                         column.innerHTML = user[a];                 
                         row.appendChild(column);
-                    }
-                        
-
-                    
+    
                 }
                 var editTd = document.createElement("td");
                 var editBtn = document.createElement("button");
                 editBtn.setAttribute("onclick", "editUser(" + i + ")");
-                editBtn.setAttribute("class", "btn btn-primary")
+                editBtn.setAttribute("class", "btn btn-secondary")
                 editBtn.innerHTML = "EDIT";
                 editTd.appendChild(editBtn);
                 row.appendChild(editTd);
