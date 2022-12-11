@@ -8,38 +8,55 @@
 }
 
 #Task{
-    width: 260px;
+    width: 300px;
+    height: 35px;
 }
 
 #category{
-    width: 260px;
-    height: 30px;
+    width: 300px;
+    height: 41px;
     /* color: gray; */
 }
 
 #jira{
     width: 114px;
+    height: 35px;
 }
 
 #Assigne{
-    height: 30px;
+    height:41px;
+    width: 195px;
 }
 
 #Status{
-    height: 30px;
+    height: 41px;
+    width: ;
 }
 #date{
-    height: 30px;
+    height: 38px;
+}
+#Date{
+    height: 38px;
 }
 #mock{
     width: 675px;
 }
 
-.btn{
+.button{
     text-align: center;
     background-color: rgb(255, 30, 0);
     width: 675px;
+    height: 36px;
     color: white;
     border-radius:0;
+    border: 0px;
     /* opacity: 0.9; */
+}
+
+.table{
+    border: 1px solid black;
+    border-collapse:separate;
+}
+.container table thead tr td{
+    background-color: rgba(205, 202, 202, 0.689);
 }
