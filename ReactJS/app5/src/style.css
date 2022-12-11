@@ -1,0 +1,47 @@
+.App {
+  text-align: center;
+}
+
+.app5{
+  border: 3px solid black;
+  background-color: aquamarine;
+  margin: 7px;
+}
+
+.child{
+  border: 2px solid black;
+  background-color: blue;
+  border-radius: 100px;
+}
+
+
+.parent{
+  border: 2px solid black;
+  background-color: rgb(173, 80, 178);
+  border-radius: 100px;
+}
+
+
+
+
+.parentFunc{
+  text-align: center;
+  border: 3px solid black;
+  background-color: rgb(144, 244, 108);
+  border-radius: 100px;
+}
+
+.childFunc{
+  text-align: center;
+  border: 3px solid black;
+  background-color: rgb(12, 2, 9);
+  color: white;
+  border-radius: 100px;
+}
+
+.mainFunc{
+  margin: 7px;
+  text-align: center;
+  border: 3px solid black;
+  background-color: rgb(204, 124, 3);
+}

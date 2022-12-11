@@ -1,0 +1,53 @@
+.App {
+  text-align: center;
+}
+
+.object{
+  border: 3px solid black;
+  margin: 7px;
+  background-color: rgb(61, 58, 248);
+  color: rgb(198, 237, 5);
+  }
+  
+  h2{
+    border: 2px solid rgb(5, 2, 2);
+    color: rgb(13, 9, 8);
+    background-color: rgb(247, 202, 78);
+    border-radius: 100px;
+  }
+
+  .object ul li{
+  list-style: none;
+  }
+
+  img{
+    border-radius: 100px;
+    width: 200px;
+  }
+  
+
+  
+  .parentFunc{
+    text-align: center;
+    border: 3px solid black;
+    background-color: rgb(20, 15, 3);
+    border-radius: 100px;
+  }
+  
+  .childFunc{
+    text-align: center;
+    border: 3px solid black;
+    background-color: rgb(103, 245, 205);
+    color: white;
+    border-radius: 100px;
+  }
+  
+  .mainFunc{
+    margin: 7px;
+    text-align: center;
+    border: 3px solid black;
+    background-color: rgb(51, 63, 95);
+    color: whitesmoke;
+  }
+  
+  
