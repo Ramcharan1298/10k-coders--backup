@@ -30,33 +30,56 @@
 
 #Status{
     height: 41px;
-    width: ;
+    width: 195px;
 }
 #date{
     height: 38px;
+    width: 160px;
 }
 #Date{
     height: 38px;
+    width: 160px;
 }
 #mock{
-    width: 675px;
+    width: 51%;
+    height: 35px;
 }
 
 .button{
     text-align: center;
     background-color: rgb(255, 30, 0);
-    width: 675px;
+    border-radius:0;
+    width: 52%;
     height: 36px;
     color: white;
-    border-radius:0;
+    
     border: 0px;
     /* opacity: 0.9; */
 }
 
-.table{
+table{
     border: 1px solid black;
-    border-collapse:separate;
+    border-collapse: collapse;
+
 }
 .container table thead tr td{
+    background-color: rgba(205, 202, 202, 0.689);
+}
+
+.container2{
+    display: flex;
+    text-align: center;
+    padding-left: 330px;
+}
+button{
+    background-color: rgb(255, 30, 0);
+    border-radius:0;
+    color: white;
+    border: 0px;
+    height: 40px;
+    border-collapse: collapse;
+}
+
+table thead tr td{
     background-color: rgba(205, 202, 202, 0.689);
 }

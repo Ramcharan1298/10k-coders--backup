@@ -4,6 +4,7 @@ import Object2 from './ClassComponents/ClassTask2';
 import Object3 from './ClassComponents/ClassTask3';
 import Object4 from './ClassComponents/ClassTask4';
 import Object5 from './ClassComponents/ClassTask5';
+import Practice from './ClassComponents/PracticeProps';
 import './style.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
        <Object3/>
        <Object4/>
        <Object5/>
+       <Practice/>
     </div>
   );
 }

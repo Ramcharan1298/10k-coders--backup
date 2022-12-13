@@ -11,7 +11,7 @@ export default class Object2 extends Component {
                 Profession: "Actor",
                 Height: "6.2"
             },
-            BestMovies: ["Varsham", "Chatrapathi", "Mirchi" ,"BAHUBALI"]
+            BestMovies: ["Varsham", "Chatrapathi", "Mirchi" ,"BAHUBALI" , "Saaho"]
         }
     }
 
