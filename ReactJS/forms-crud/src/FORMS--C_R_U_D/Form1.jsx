@@ -25,7 +25,7 @@ export default class Form1 extends Component {
         console.log(newusers)
     }
     adduser = () => {
-        // console.log(this.state.person)
+        console.log(this.state.person)
         var neweveryUser = [...this.state.everyuser];
         neweveryUser.push(this.state.person);
         this.setState({ everyuser: neweveryUser });
@@ -137,10 +137,10 @@ export default class Form1 extends Component {
                                     <td>{usr.experience}</td>
                                     <td>{usr.website}</td>
                                     <td>
-                                        <button type="button" className="btn1" onClick={this.edituser(usr , i)}>EDIT</button>
+                                        <button type="button" className="btn1" onClick={()=>{this.edituser(usr , i)}}>EDIT</button>
                                     </td>
                                     <td>
-                                        <button type="button" className="btn2" onClick={this.deleteuser(usr)}>DELETE</button>
+                                        <button type="button" className="btn2" onClick={()=>{this.deleteuser(usr)}}>DELETE</button>
                                     </td>
                                 </tr>
 
