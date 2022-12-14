@@ -1,0 +1,81 @@
+.App {
+  text-align: center;
+}
+
+*{
+  font-family: 'poppins',sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+body{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: bisque;
+}
+.container{
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  background-color: white;
+  padding: 20px 30px;
+  padding-top: 60px;
+}
+table  th{
+  border: 1px solid black;
+  font-size: 17px;
+  font-weight: bold;
+}
+table{
+  background-color: rgb(174, 243, 237);
+  float:left;
+}
+label{
+  float: left;
+  font-weight: 600;
+}
+
+
+
+#year{
+  width: 90px;
+  height: 40px;
+  border-radius: 5px;
+  float: left;
+  padding-left: 10px;
+}
+#month{
+  width:140px ;
+  height: 40px;
+  border-radius: 5px;
+  float: left;
+  padding-left: 10px;
+}
+#day{
+  width: 70px;
+  height: 40px;
+  border-radius: 5px;
+  float: left;
+  padding-left: 10px;
+}
+#Height{
+  width: 170px;
+  height: 40px;
+  border-radius: 5px;
+  float: left;
+  padding-left: 10px;
+}
+#weight{
+  width: 170px;
+  height: 40px;
+  border-radius: 5px;
+  float: left;
+  padding-left: 10px;
+}
+button{
+  float: left;
+}

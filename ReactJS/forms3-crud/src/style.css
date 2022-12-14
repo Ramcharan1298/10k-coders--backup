@@ -40,7 +40,18 @@ button{
 form{
   background-color: rgb(164, 164, 243); ;
 }
-
+.swap{
+  background-color: rgb(255, 48, 169);
+  font-weight: bold;
+}
+.btn1{
+  background-color: rgb(15, 244, 65);
+  font-weight: bold;
+}
+.btn2{
+  background-color: rgb(241, 5, 5);
+  font-weight: bold;
+}
 
 
 
@@ -50,7 +61,7 @@ form{
 }
 #add{
   position: relative;
-  left: 53px;
+  left: 49px;
   margin-top: 8px;
   width: 300px;
 }

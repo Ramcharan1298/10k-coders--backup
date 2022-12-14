@@ -1,0 +1,39 @@
+.App {
+  text-align: center;
+}
+
+*{
+  font-family: 'poppins',sans-serif;
+  /* background-color: bisque; */
+}
+label{
+  float: left;
+  /* background-color:white ; */
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  padding: 350px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  /* background-color: bisque; */
+  border: 1px solid black;
+  /* padding-left: 700px; */
+
+}
+h4{
+  border: 1px solid black;
+  background-color: rgb(224, 224, 224);
+}
+table tr td{
+  border: 1px solid black;
+}
+table th{
+  border: 1px solid black;
+}
+/* div{
+  background-color: white;
+} */
+/* .Name{
+  background-color: white;
+} */

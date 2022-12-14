@@ -86,7 +86,10 @@ button{
   font-weight: bold;
   font-size: 17px;
 }
-
+.status{
+  position: relative;
+  right: 68px;
+}
 
 
 

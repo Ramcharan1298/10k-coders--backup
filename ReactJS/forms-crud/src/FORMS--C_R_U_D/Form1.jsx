@@ -9,6 +9,8 @@ export default class Form1 extends Component {
                 institute: "",
                 branch: "",
                 degree: "",
+                pursuing:"",
+                completed:"",
                 average: "",
                 experience: "",
                 website: ""
@@ -37,6 +39,7 @@ export default class Form1 extends Component {
             institute: "",
             branch: "",
             degree: "",
+            status:"",
             average: "",
             experience: "",
             website: ""
@@ -52,7 +55,8 @@ export default class Form1 extends Component {
         // console.log("deleting the user")
         // var latestUsers = [...this.state.everyuser];
         var latestUsers = this.state.everyuser.filter((myuser)=>
-        myuser.degree !== usr.degree);
+        myuser.degree !== usr.degree
+        );
         this.setState({everyuser : latestUsers})
     }
     updateUser = ()=>{
@@ -100,6 +104,12 @@ export default class Form1 extends Component {
                             </select><br /><br />
                         </div>
 
+                        <div className="status" onChange={(e)=>{this.checkingInput(e)}}>
+                            <label htmlFor="Status">Status :</label>
+                            <input type="radio" name="status" value="pursuing" />Pursuing
+                            <input type="radio" name="status" value="completed" />Completed
+                        </div><br />
+
                         <div className="average">
                             <label htmlFor="Average CPI" id="avg">Average CPI:</label>
                             <input type="text" name="average" id="average" min="1" max="80" value={this.state.person.average} onChange={(e) => { this.checkingInput(e) }} /><br /><br />
@@ -128,6 +138,8 @@ export default class Form1 extends Component {
                                 <th>Institute</th>
                                 <th>Branch</th>
                                 <th>Degree</th>
+                                <th>Status</th>
+                                {/* <th>Completed</th> */}
                                 <th>AverageCPI</th>
                                 <th>Experience</th>
                                 <th>Website</th>
@@ -142,6 +154,7 @@ export default class Form1 extends Component {
                                     <td>{usr.institute}</td>
                                     <td>{usr.branch}</td>
                                     <td>{usr.degree}</td>
+                                    <td>{usr.status}</td>
                                     <td>{usr.average}</td>
                                     <td>{usr.experience}</td>
                                     <td>{usr.website}</td>

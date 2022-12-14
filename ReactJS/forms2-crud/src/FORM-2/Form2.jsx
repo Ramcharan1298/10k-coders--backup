@@ -22,6 +22,7 @@ export default class Form2 extends Component {
         newperson[e.target.name] = e.target.value;
         this.setState({person:newperson})
     }
+    
     submit=()=>{
         console.log("adding user");
         var neweachusers = [...this.state.eachuser];
