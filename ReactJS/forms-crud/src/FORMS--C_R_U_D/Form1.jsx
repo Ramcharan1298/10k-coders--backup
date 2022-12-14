@@ -1,8 +1,8 @@
 import { Component } from "react";
 
 export default class Form1 extends Component {
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
         this.state = {
             person: {
                 university: "",
@@ -48,9 +48,18 @@ export default class Form1 extends Component {
         // console.log("editing")
         {this.setState({person : usr , IndexofEdit : i })}
     }
-    deleteuser=()=>{
-        console.log("deleting the user")
-
+    deleteuser=(usr)=>{
+        // console.log("deleting the user")
+        // var latestUsers = [...this.state.everyuser];
+        var latestUsers = this.state.everyuser.filter((myuser)=>
+        myuser.degree !== usr.degree);
+        this.setState({everyuser : latestUsers})
+    }
+    updateUser = ()=>{
+        var latestUsers = [...this.state.everyuser];
+        latestUsers[this.state.IndexofEdit] = this.state.person;
+        this.setState({everyuser : latestUsers , IndexofEdit :null})
+        this.clearform()
     }
     render() {
         return (
@@ -106,13 +115,13 @@ export default class Form1 extends Component {
                             <input type="text" name="website" id="web" min="1" max="10" value={this.state.person.website} onChange={(e) => { this.checkingInput(e) }} /><br /><br />
                         </div>
 
-                        <button type="button" onClick={this.adduser}>ADD DETAILS</button>
+                        {this.state.IndexofEdit !==null ? <button type="button" className="swap" onClick={this.updateUser}>UPDATE USER</button> : <button type="button" onClick={this.adduser}>ADD DETAILS</button>}
                     </form>
                 </fieldset><br /><br />
 
 
                 <div id="userTable">
-                    <table border="2">
+                    <table border="2" >
                         <thead>
                             <tr>
                                 <th>University</th>
@@ -140,7 +149,7 @@ export default class Form1 extends Component {
                                         <button type="button" className="btn1" onClick={()=>{this.edituser(usr , i)}}>EDIT</button>
                                     </td>
                                     <td>
-                                        <button type="button" className="btn2" onClick={()=>{this.deleteuser(usr)}}>DELETE</button>
+                                        <button type="button" className="btn2" onClick={()=>{this.deleteuser(usr , i)}}>DELETE</button>
                                     </td>
                                 </tr>
 
