@@ -40,9 +40,11 @@ export default class Form1 extends Component {
             branch: "",
             degree: "",
             status:"",
+            subjects:"",
             average: "",
             experience: "",
-            website: ""
+            website: "",
+            checked : true
         }
         this.setState({ person: freshform })
     }
@@ -110,6 +112,14 @@ export default class Form1 extends Component {
                             <input type="radio" name="status" value="completed" />Completed
                         </div><br />
 
+                         <div className="subjects" onChange={(e)=>{this.checkingInput(e)}}>
+                            <label htmlFor="Subject">Subjects :</label>
+                            <input type="checkbox" name="subjects" value="HTML" />HTML &nbsp;
+                            <input type="checkbox" name="subjects" value="CSS" />CSS &nbsp;
+                            <input type="checkbox" name="subjects" value="JAVASCRIPT" />JAVASCRIPT &nbsp;
+                            <input type="checkbox" name="subjects" value="REACT JS" />REACT JS 
+                         </div><br />
+
                         <div className="average">
                             <label htmlFor="Average CPI" id="avg">Average CPI:</label>
                             <input type="text" name="average" id="average" min="1" max="80" value={this.state.person.average} onChange={(e) => { this.checkingInput(e) }} /><br /><br />
@@ -139,7 +149,7 @@ export default class Form1 extends Component {
                                 <th>Branch</th>
                                 <th>Degree</th>
                                 <th>Status</th>
-                                {/* <th>Completed</th> */}
+                                <th>Subjects</th>
                                 <th>AverageCPI</th>
                                 <th>Experience</th>
                                 <th>Website</th>
@@ -155,6 +165,7 @@ export default class Form1 extends Component {
                                     <td>{usr.branch}</td>
                                     <td>{usr.degree}</td>
                                     <td>{usr.status}</td>
+                                    <td>{usr.subjects}</td>
                                     <td>{usr.average}</td>
                                     <td>{usr.experience}</td>
                                     <td>{usr.website}</td>
