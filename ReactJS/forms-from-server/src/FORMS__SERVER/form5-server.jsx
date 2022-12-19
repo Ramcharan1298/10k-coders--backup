@@ -1,16 +1,18 @@
+import axios from "axios";
 import { Component } from "react";
 
-export default class Form1 extends Component {
+export default class Form5server extends Component {
     constructor() {
         super()
         this.state = {
             person: {
+                id:"",
                 university: "",
                 institute: "",
                 branch: "",
                 degree: "",
                 status:"",
-                subjects:[],
+                // subjects:[],
                 average: "",
                 experience: "",
                 website: ""
@@ -29,42 +31,50 @@ export default class Form1 extends Component {
         console.log(newusers)
         if(e.target.name == "status"){
             this.setState({status:e.target.value})
-        }else{
-            var Checkboxes = [...this.state.person.subjects];
-            if(Checkboxes.length == 0){ 
-                Checkboxes.push(e.target.value)
-            }else{
-                let check = Checkboxes.find((cb) => cb == e.target.value);
-              if(check){
-                Checkboxes = Checkboxes.filter((cb) => cb != e.taget.value);
-              }else{
-                Checkboxes.push(e.target.value)
-              }    
-            }
-            this.setState({ subjects: Checkboxes });
         }
-    };
+    }
+        // else{
+        //     var Checkboxes = [...this.state.person.subjects];
+        //     if(Checkboxes.length == 0){ 
+        //         Checkboxes.push(e.target.value)
+        //     }else{
+        //         let check = Checkboxes.find((cb) => cb == e.target.value);
+        //       if(check){
+        //         Checkboxes = Checkboxes.filter((cb) => cb != e.taget.value);
+        //       }else{
+        //         Checkboxes.push(e.target.value)
+        //       }    
+        //     }
+        //     this.setState({ subjects: Checkboxes });
+        // }
+    // };
     adduser = () => {
-        console.log(this.state.person)
+        // console.log(this.state.person)
+        axios({
+            method:'post',
+            url:'http://localhost:3003/form5/',
+            data: this.state.person,
+            headers:{
+                'Content-Type':'application/json',
+            }
+        })
         var neweveryUser = [...this.state.everyuser];
         neweveryUser.push(this.state.person);
         this.setState({ everyuser: neweveryUser });
         this.clearform()
     }
+
     clearform = () => {
         var freshform = {
+            id:"",
             university: "",
             institute: "",
             branch: "",
             degree: "",
             status:"",
-            // pursuing:"",
-            // completed:"",
-            subjects:[],
             average: "",
             experience: "",
             website: "",
-            // checked : true
         }
         this.setState({ person: freshform })
     }
@@ -73,26 +83,39 @@ export default class Form1 extends Component {
         // console.log("editing")
         {this.setState({person : usr , IndexofEdit : i })}
     }
-    deleteuser=(usr)=>{
-        // console.log("deleting the user")
-        // var latestUsers = [...this.state.everyuser];
-        var latestUsers = this.state.everyuser.filter((myuser)=>
-        myuser.degree !== usr.degree
-        );
-        this.setState({everyuser : latestUsers})
+
+    deleteuser=(user , i)=>{
+        var number = i+1;
+        console.log(number);
+        // console.log(user,id);
+        axios.delete("http://localhost:3003/form5/"+number).then((res)=>{
+            this.componentDidMount()
+        })
     }
+
     updateUser = ()=>{
+        var number = this.state.IndexofEdit+1;
+        axios({
+            method:"post",
+            url:'http://localhost:3003/form5/'+number,
+            data:this.state.person
+        })
         var latestUsers = [...this.state.everyuser];
         latestUsers[this.state.IndexofEdit] = this.state.person;
         this.setState({everyuser : latestUsers , IndexofEdit :null})
         this.clearform()
     }
+
     render() {
         return (
             <div className="Container">
                 <fieldset>
                     <legend>Registration Details</legend>
                     <form>
+                        <div className="University">
+                            <label htmlFor="University">ID :</label>
+                            <input type="text" name="id" id="Uname" disabled value={this.state.person.id} onChange={(e) => { this.checkingInput(e) }} /><br /><br />
+                        </div>
                         <div className="University">
                             <label htmlFor="University">University :</label>
                             <input type="text" name="university" id="Uname" value={this.state.person.university} onChange={(e) => { this.checkingInput(e) }} /><br /><br />
@@ -132,13 +155,13 @@ export default class Form1 extends Component {
                             <input type="radio" name="status" value={"Completed"} checked={this.state.person.status =="Completed"} onChange={(e)=>{this.checkingInput(e)}}/>Completed
                         </div><br />
 
-                         <div className="Subjects" >
+                         {/* <div className="Subjects" >
                             <label htmlFor="Subject">Subjects :</label>
                             <input type="checkbox"  value="HTML" onChange={(e)=>{this.checkingInput(e)}} checked={this.state.person.subjects.indexOf("HTML")> -1}/>HTML &nbsp;
                             <input type="checkbox"  value="CSS" onChange={(e)=>{this.checkingInput(e)}} checked={this.state.person.subjects.indexOf("CSS")>-1}/>CSS &nbsp;
                             <input type="checkbox"  value="JAVASCRIPT" onChange={(e)=>{this.checkingInput(e)}} checked={this.state.person.subjects.indexOf("JAVASCRIPT")>-1}/>JAVASCRIPT &nbsp;
                             <input type="checkbox"  value="REACT JS" onChange={(e)=>{this.checkingInput(e)}} checked={this.state.person.subjects.indexOf("REACT JS")>-1}/>REACT JS 
-                         </div><br />
+                         </div><br /> */}
 
                         <div className="average">
                             <label htmlFor="Average CPI" id="avg">Average CPI:</label>
@@ -164,12 +187,13 @@ export default class Form1 extends Component {
                     <table border="2" >
                         <thead>
                             <tr>
+                                <th>ID</th>
                                 <th>University</th>
                                 <th>Institute</th>
                                 <th>Branch</th>
                                 <th>Degree</th>
                                 <th>Status</th>
-                                <th>Subjects</th>
+                                {/* <th>Subjects</th> */}
                                 <th>AverageCPI</th>
                                 <th>Experience</th>
                                 <th>Website</th>
@@ -180,12 +204,13 @@ export default class Form1 extends Component {
                         <tbody>
                             {this.state.everyuser.map((usr, i) => (
                                 <tr key={i}>
+                                    <td>{usr.id}</td>
                                     <td>{usr.university}</td>
                                     <td>{usr.institute}</td>
                                     <td>{usr.branch}</td>
                                     <td>{usr.degree}</td>
                                     <td>{usr.status}</td>
-                                    <td>{usr.subjects}</td>
+                                    {/* <td>{usr.subjects}</td> */}
                                     <td>{usr.average}</td>
                                     <td>{usr.experience}</td>
                                     <td>{usr.website}</td>
@@ -206,4 +231,8 @@ export default class Form1 extends Component {
 
     }
 
+    async componentDidMount(){
+        let response = await axios.get("http://localhost:3003/form5/")
+        this.setState({everyuser : response.data})
+    }
 }

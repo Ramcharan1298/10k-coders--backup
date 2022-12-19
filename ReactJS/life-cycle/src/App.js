@@ -1,11 +1,10 @@
-
 import './App.css';
-import Sample from './RECIPIES_API/sample';
+import LifeCycle from './Life-Cycle1/life-cycle';
 
 function App() {
   return (
     <div className="App">
-      <Sample/>
+      <LifeCycle/>
     </div>
   );
 }

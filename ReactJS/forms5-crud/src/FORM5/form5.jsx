@@ -10,7 +10,7 @@ export default class Form5 extends Component {
                 email: "",
                 password: "",
                 confirmpassword: "",
-                message: ""
+                message: "",
             },
             everyuser : [],
 
@@ -39,7 +39,7 @@ export default class Form5 extends Component {
                 email: "",
                 password: "",
                 confirmpassword: "",
-                message: ""
+                message: "",
             }
             this.setState({person : freshform})
         }
