@@ -15,6 +15,7 @@ var ServerCrud = () => {
     });
 
     const [clients, setClients] = useState([]);
+    const [edit , setEdit]  = useState(false)
     useEffect(() => {
         takingusers();
     }, []);
@@ -29,15 +30,47 @@ var ServerCrud = () => {
         axios.post("http://localhost:3003/form1", user).then(() => {
             // console.log("user is added")
             takingusers();
+            clearform();
         })
     };
 
     const takingusers = () => {
         axios.get("http://localhost:3003/form1").then((response) => {
             setClients(response.data);
+            console.log(response.data)
         })
     };
 
+    const deletingusers=(ram)=>{
+        axios.delete("http://localhost:3003/form1/"+ram.id).then((response)=>{
+            takingusers();
+        })
+    }
+
+    const editusers=(ram)=>{
+        setEdit(true)
+        setUser(ram)
+    }
+
+    const updateusers=()=>{
+       axios.put("http://localhost:3003/form1/"+user.id,user).then(()=>{
+        takingusers();
+        clearform();
+        setEdit(false)
+       })
+    }
+
+    const clearform=()=>{
+      setUser({
+        id: "",
+        name: "",
+        username: "",
+        email: "",
+        password: "",
+        confirmpassword: "",
+        message: "",
+      })
+    }
     return (
         <div className='container'>
             <h4>Bootstrap Form Validation </h4><hr />
@@ -76,7 +109,7 @@ var ServerCrud = () => {
                 <textarea type="text" className="form-control" name="message" id="message" placeholder='Message' cols="24" rows="3" value={user.message} onChange={(e) => { CheckingInput(e) }}></textarea><br /><br />
             </div>
 
-            <button type="button" onClick={submit}>SUBMIT</button>
+            {edit? <button type="button" className="btn btn-primary" onClick={updateusers}>UPDATE</button> : <button type="button" className="btn btn-secondary" onClick={submit}>SUBMIT</button>}
 
 
 
@@ -97,7 +130,7 @@ var ServerCrud = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {clients.map((ram, i) => {
+                        {clients.map((ram, i) => 
                             <tr key={i}>
                                 <td>{ram.id}</td>
                                 <td>{ram.name}</td>
@@ -106,10 +139,10 @@ var ServerCrud = () => {
                                 <td>{ram.password}</td>
                                 <td>{ram.confirmpassword}</td>
                                 <td>{ram.message}</td>
-                                <td><button type="button" className="btn btn-success">EDIT</button></td>
-                                <td><button type="button" className="btn btn-danger">DELETE</button></td>
+                                <td><button type="button" className="btn btn-success" onClick={()=>{editusers(ram ,i)}}>EDIT</button></td>
+                                <td><button type="button" className="btn btn-danger" onClick={()=>{deletingusers(ram , i)}}>DELETE</button></td>
                             </tr>
-                        })}
+                        )}
                     </tbody>
                 </table>
             </div>

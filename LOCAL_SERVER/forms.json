@@ -7,7 +7,7 @@
       "email": "prabhasuppalapaati@gmail.com",
       "password": "prabha@1234",
       "confirmpassword": "prabha@1234",
-      "message": "Hi this is Prabhas.....!!!!"
+      "message": "Hi this is Prabhas"
     },
     {
       "id": 2,
@@ -37,15 +37,6 @@
       "message": "Hi this is Prabhas.....!!!!"
     },
     {
-      "id": 13,
-      "name": "Ramcharan Yachamaneni",
-      "username": "Ramcharan",
-      "email": "",
-      "password": "",
-      "confirmpassword": "",
-      "message": ""
-    },
-    {
       "id": 14,
       "name": "Ramcharan Yachamaneni",
       "username": "Ramcharan",
@@ -55,177 +46,6 @@
       "message": "dfdasfsfas"
     },
     {
-      "id": 15,
-      "name": "K srinivasulu",
-      "username": "Ramcharan",
-      "email": "yachamaneniramcharan@gmail.com",
-      "password": "hgghgfxdst",
-      "confirmpassword": "dgdhghgdg",
-      "message": "grggcthtwhh"
-    },
-    {
-      "id": 16,
-      "name": "",
-      "username": "Ram",
-      "email": "",
-      "password": "",
-      "confirmpassword": "",
-      "message": "cfdssfdaff"
-    },
-    {
-      "id": 17,
-      "name": "",
-      "username": "",
-      "email": "yachamaneniramcharan@gmail.com",
-      "password": "",
-      "confirmpassword": "",
-      "message": ""
-    },
-    {
-      "id": 18,
-      "name": "sai praneeth",
-      "username": "",
-      "email": "",
-      "password": "",
-      "confirmpassword": "",
-      "message": "sdfdfsdfda"
-    },
-    {
-      "id": 19,
-      "name": "",
-      "username": "",
-      "email": "",
-      "password": "",
-      "confirmpassword": "",
-      "message": ""
-    },
-    {
-      "name": "",
-      "username": "",
-      "email": "",
-      "password": "",
-      "confirmpassword": "",
-      "message": "",
-      "id": 20
-    },
-    {
-      "name": "",
-      "username": "dfadfas",
-      "email": "",
-      "password": "",
-      "confirmpassword": "",
-      "message": "",
-      "id": 21
-    },
-    {
-      "id": 22,
-      "name": "sdfdsafdssa",
-      "username": "",
-      "email": "",
-      "password": "",
-      "confirmpassword": "",
-      "message": ""
-    },
-    {
-      "id": 23,
-      "name": "sdfdsafdssa",
-      "username": "",
-      "email": "",
-      "password": "",
-      "confirmpassword": "",
-      "message": ""
-    },
-    {
-      "id": 24,
-      "name": "sdfdsafdssa",
-      "username": "",
-      "email": "",
-      "password": "",
-      "confirmpassword": "",
-      "message": ""
-    },
-    {
-      "id": 25,
-      "name": "sdfdsafdssa",
-      "username": "",
-      "email": "",
-      "password": "",
-      "confirmpassword": "",
-      "message": ""
-    },
-    {
-      "id": 26,
-      "name": "sdfdsafdssa",
-      "username": "",
-      "email": "",
-      "password": "",
-      "confirmpassword": "",
-      "message": ""
-    },
-    {
-      "id": 27,
-      "name": "sdfdsafdssa",
-      "username": "",
-      "email": "",
-      "password": "",
-      "confirmpassword": "",
-      "message": ""
-    },
-    {
-      "id": 28,
-      "name": "sdfdsafdssa",
-      "username": "",
-      "email": "",
-      "password": "",
-      "confirmpassword": "",
-      "message": ""
-    },
-    {
-      "id": 29,
-      "name": "sdfdsafdssa",
-      "username": "",
-      "email": "",
-      "password": "",
-      "confirmpassword": "",
-      "message": ""
-    },
-    {
-      "id": 30,
-      "name": "sdfdsafdssa",
-      "username": "",
-      "email": "",
-      "password": "",
-      "confirmpassword": "",
-      "message": ""
-    },
-    {
-      "id": 31,
-      "name": "sdfdsafdssa",
-      "username": "",
-      "email": "",
-      "password": "",
-      "confirmpassword": "",
-      "message": ""
-    },
-    {
-      "id": 32,
-      "name": "sdfdsafdssa",
-      "username": "",
-      "email": "",
-      "password": "",
-      "confirmpassword": "",
-      "message": ""
-    },
-    {
-      "id": 33,
-      "name": "sdfdsafdssa",
-      "username": "",
-      "email": "",
-      "password": "",
-      "confirmpassword": "",
-      "message": ""
-    },
-    {
       "id": 34,
       "name": "Ramcharan Yachamaneni",
       "username": "Ramcharan",
@@ -233,42 +53,6 @@
       "password": "sf2122",
       "confirmpassword": "1212121",
       "message": "123232"
-    },
-    {
-      "id": 35,
-      "name": "",
-      "username": "",
-      "email": "yachamaneniramcharan@gmail.com",
-      "password": "",
-      "confirmpassword": "",
-      "message": ""
-    },
-    {
-      "id": 36,
-      "name": "",
-      "username": "",
-      "email": "",
-      "password": "",
-      "confirmpassword": "fdfadsffsdf",
-      "message": ""
-    },
-    {
-      "id": 37,
-      "name": "",
-      "username": "",
-      "email": "",
-      "password": "",
-      "confirmpassword": "fdfadsffsdf",
-      "message": ""
-    },
-    {
-      "id": 38,
-      "name": "",
-      "username": "",
-      "email": "",
-      "password": "",
-      "confirmpassword": "fdfadsffsdf",
-      "message": ""
     }
   ],
   "form2": [
@@ -294,7 +78,7 @@
       "lastname": "raju",
       "dateofbirth": "03/07/2001",
       "emailid": "achamaneniramcharan@gmail.com",
-      "mobilenumber": "6305934193"
+      "mobilenumber": "63059"
     },
     {
       "id": 4,
@@ -319,6 +103,13 @@
       "dateofbirth": "03/07/2001",
       "emailid": "yachamaneniramcharan@gmail.com",
       "mobilenumber": "0960 309 8458"
+    },
+    {
+      "id": 7,
+      "street": "1-144, B.N.kandriga",
+      "city": "SRIKALAHASTHI",
+      "zipcode": "517645",
+      "country": "India"
     }
   ],
   "form3": [
@@ -327,7 +118,7 @@
       "street": "rg street",
       "city": "delhi",
       "zipcode": "539594",
-      "country": "india"
+      "country": "dallas"
     },
     {
       "id": 2,
@@ -394,7 +185,7 @@
     },
     {
       "id": 3,
-      "username": "srinu",
+      "username": "charan",
       "password": "srinu123",
       "email": "saipraneethrao23@gmail.com",
       "gender1": "I am a women",
@@ -453,7 +244,7 @@
       "status": "Completed",
       "average": "77",
       "experience": "6",
-      "website": "www.malla.com"
+      "website": "www.malla"
     },
     {
       "id": 3,
