@@ -278,6 +278,17 @@
       "average": "55",
       "experience": "5",
       "website": "www.Vignan.com"
+    },
+    {
+      "id": 6,
+      "university": "uiniversity",
+      "institute": "St.marys Group of Institutions",
+      "branch": "CSE",
+      "degree": "BTECH",
+      "status": "Pursuing",
+      "average": "70%",
+      "experience": "4",
+      "website": "elvis.io"
     }
   ]
 }
