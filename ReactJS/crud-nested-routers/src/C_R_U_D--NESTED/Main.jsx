@@ -37,6 +37,6 @@ const Main = () => {
             </table>
         </div>
     );
-}
+};
 
 export default Main;
