@@ -10,7 +10,7 @@ const Main = () => {
      },[])
 
     const gettingusers= async () =>{
-        const response =await (await fetch("http://localhost:3003/form1")).json();
+        const response = await (await fetch("http://localhost:3003/form1")).json();
         setUsers(response)
         console.log(response)
     };

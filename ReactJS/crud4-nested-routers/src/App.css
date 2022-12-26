@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+}
+
+*{
+  font-family: 'poppins',sans-serif;
+}
+img{
+  width: 1500px;
+  height: 200px;
+}
+
+.crud{
+  width: 65px;
+  height: 40px;
+  border-radius: 100px;
+}
+.collapse{
+  border-radius: 100px;
+}
+.nav-link{
+  border-radius: 100px;
+  color: rgb(3, 3, 3);
+  font-weight: 600;
+}
+.navbar-nav{
+  border-radius: 100px;
+}

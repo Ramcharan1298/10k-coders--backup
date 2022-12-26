@@ -46,13 +46,13 @@
       "message": "dfdasfsfas"
     },
     {
-      "id": 34,
-      "name": "Ramcharan Yachamaneni",
-      "username": "Ramcharan",
-      "email": "yachamaneniramcharan@gmail.com",
-      "password": "sf2122",
-      "confirmpassword": "1212121",
-      "message": "123232"
+      "id": 15,
+      "name": "sai praneeth",
+      "username": "ramcharan",
+      "email": "saipraneethrao23@gmail.com",
+      "password": "asdasfsa",
+      "confirmpassword": "sdafadsfds",
+      "message": "Hi this is from Sai Praneeth........!!!!!!"
     }
   ],
   "form2": [
@@ -78,7 +78,7 @@
       "lastname": "raju",
       "dateofbirth": "03/07/2001",
       "emailid": "achamaneniramcharan@gmail.com",
-      "mobilenumber": "63059"
+      "mobilenumber": "6305934193"
     },
     {
       "id": 4,
@@ -103,13 +103,6 @@
       "dateofbirth": "03/07/2001",
       "emailid": "yachamaneniramcharan@gmail.com",
       "mobilenumber": "0960 309 8458"
-    },
-    {
-      "id": 7,
-      "street": "1-144, B.N.kandriga",
-      "city": "SRIKALAHASTHI",
-      "zipcode": "517645",
-      "country": "India"
     }
   ],
   "form3": [
@@ -143,17 +136,20 @@
     },
     {
       "id": 5,
-      "street": "Housing Board street",
-      "city": "SKHT",
-      "zipcode": "523394",
-      "country": "india"
-    },
-    {
-      "id": 6,
-      "street": "Panagal street",
-      "city": "Tirupathi",
-      "zipcode": "539594",
-      "country": "America"
+      "username": "",
+      "password": "",
+      "email": "",
+      "gender1": "",
+      "gender2": "",
+      "dob": "",
+      "dob2": "",
+      "dob3": "",
+      "height": "",
+      "weight": "",
+      "street": "1-144, BNkandriga",
+      "city": "Select",
+      "zipcode": "517645",
+      "country": "India"
     }
   ],
   "form4": [
@@ -162,8 +158,8 @@
       "username": "Ramcharan",
       "password": "ram123",
       "email": "yachamaneniramcharan@gmail.com",
-      "gender1": "I am a man",
-      "gender2": "I want to find women",
+      "gender1": "I am a others",
+      "gender2": "I want to find others",
       "dob": "23",
       "dob2": "6",
       "dob3": "2001",
@@ -211,16 +207,16 @@
     },
     {
       "id": 5,
-      "username": "Ramcharan",
-      "password": "ram123",
+      "username": "",
+      "password": "",
       "email": "yachamaneniramcharan@gmail.com",
-      "gender1": "I am a man",
-      "gender2": "I want to find women",
-      "dob": "23",
-      "dob2": "6",
-      "dob3": "2001",
-      "height": "6.2 feets",
-      "weight": "85Kgs"
+      "gender1": "I am a women",
+      "gender2": "",
+      "dob": "2004",
+      "dob2": "October",
+      "dob3": "06",
+      "height": "5.9",
+      "weight": "90kg"
     }
   ],
   "form5": [
@@ -264,7 +260,7 @@
       "branch": "EEE",
       "degree": "B-TECH",
       "status": "Pursuing",
-      "average": "65",
+      "average": "99",
       "experience": "3",
       "website": "www.GURUNANAK.com"
     },
@@ -278,17 +274,6 @@
       "average": "55",
       "experience": "5",
       "website": "www.Vignan.com"
-    },
-    {
-      "id": 6,
-      "university": "uiniversity",
-      "institute": "St.marys Group of Institutions",
-      "branch": "CSE",
-      "degree": "BTECH",
-      "status": "Pursuing",
-      "average": "70%",
-      "experience": "4",
-      "website": "elvis.io"
     }
   ]
 }

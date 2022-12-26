@@ -1,7 +1,18 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 const User = ({usr}) => {
+    const navigate = useNavigate();
+
+    const managingDelete =(usr)=>{
+        console.log(usr)
+        navigate('/Deleteuser/' + usr.id)
+    };
+
+    const managingEdit=(usr)=>{
+        navigate('/Edituser/' + usr.id)
+    };
+
     return (
         <tr>
             <td>{usr.id}</td>
@@ -11,8 +22,8 @@ const User = ({usr}) => {
             <td>{usr.password}</td>
             <td>{usr.confirmpassword}</td>
             <td>{usr.message}</td>
-            <td><Link to="/Edituser"><button type='button' className='btn btn-warning'>EDIT</button></Link></td>
-            <td><Link to="/Deleteuser"><button type='button' className='btn btn-danger' >DELETE</button></Link></td>
+            <td><button type='button' className='btn btn-warning' onClick={()=>managingEdit(usr)}>EDIT</button></td>
+            <td><button type='button' className='btn btn-danger' onClick={()=>managingDelete(usr)}>DELETE</button></td>
         </tr>
     );
 }
