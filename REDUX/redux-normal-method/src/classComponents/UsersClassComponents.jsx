@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addUserAction } from '../actions/usersAction';
+import { addUserAction, deleteuserAction, updateuserAction } from '../actions/usersAction';
 
 class UsersClassComponents extends Component {
     constructor(props) {
@@ -14,7 +14,8 @@ class UsersClassComponents extends Component {
                 password: "",
                 confirmpassword: "",
                 message: "",
-            }
+            },
+            isEdit: false
         }
     }
 
@@ -27,6 +28,35 @@ class UsersClassComponents extends Component {
     addingUser = () => {
         console.log(this.state.user);
         this.props.addUser(this.state.user)
+        this.clearform();
+    };
+
+    clearform=()=>{
+        this.setState({
+            user:{
+                id: "",
+                name: "",
+                username: "",
+                email: "",
+                password: "",
+                confirmpassword: "",
+                message: "",
+            }
+        })
+    }
+
+    deleteuser=(user)=>{
+        this.props.deleteuser(user)
+    }
+
+    editUser=(user)=>{
+        this.setState({user , isEdit:true});
+    }
+
+    updateUser=()=>{
+        this.props.updateUser(this.state.user)
+        this.clearform()
+        this.setState({isEdit:false})
     }
 
     render() {
@@ -55,7 +85,7 @@ class UsersClassComponents extends Component {
 
                     <div className='Email'>
                         <label >Email</label><br />
-                        <input type="text" className="form-control" name='email' placeholder='Email' value={email} onChange={(e) => { this.CheckingInput(e) }} /><br />
+                        <input type="text" className="form-control" name='email' disabled={this.state.isEdit} placeholder='Email' value={email} onChange={(e) => { this.CheckingInput(e) }} /><br />
                     </div>
 
                     <div className='Password'>
@@ -73,7 +103,8 @@ class UsersClassComponents extends Component {
                         <textarea type="text" className="form-control" name="message" placeholder='Message' cols="24" rows="3" value={message} onChange={(e) => { this.CheckingInput(e) }}></textarea><br /><br />
                     </div>
 
-                    <button className='btn btn-success' onClick={this.addingUser}>ADD HERO</button>
+                    {this.state.isEdit ?  <button className='btn btn-primary' onClick={this.updateUser}>UPDATE</button> :                     <button className='btn btn-success' onClick={this.addingUser}>ADD HERO</button>}
+
                     <br /><br /><div className='container'>
                         <table className="table">
                             <thead>
@@ -117,7 +148,7 @@ class UsersClassComponents extends Component {
 }
 
 function mapStateToProps(state) {
-    console.log(state);
+    // console.log(state);
     return {
         everyusers: state.users,
     }
@@ -125,7 +156,9 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        addUser: (user) => dispatch(addUserAction(user))
+        addUser: (user) => dispatch(addUserAction(user)),
+        deleteuser: (user) =>dispatch(deleteuserAction(user)),
+        updateUser:(user)=>dispatch(updateuserAction(user))
     }
 }
 
